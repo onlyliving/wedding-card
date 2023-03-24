@@ -70,3 +70,20 @@ $ deactivate
 -   [] 일단 배포
 -   [] env 환경 설정 (지도맵)
 -   [] python 환경 설정 (FastAPI)
+
+```bash
+$ npm install -D gh-pages
+```
+
+```json
+// package.json
+"scripts": {
+	...,
+    "deploy": "gh-pages -d dist"
+}
+```
+
+```bash
+$ npm run build
+$ npm run deploy
+```
