@@ -18,5 +18,6 @@ export default ({ mode }) => {
                 },
             }),
         ],
+        base: "/wedding-card/",
     };
 };
