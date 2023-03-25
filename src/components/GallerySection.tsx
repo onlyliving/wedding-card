@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import React, { useEffect, useState, useRef } from "react";
 
+import ImageSlidePopup from "./ImageSlidePopup";
+
 const Content = styled.section`
     // min-height: 100vh;
     padding: 36px 0;
@@ -106,6 +108,8 @@ export default () => {
     const imgRef = useRef<HTMLImageElement[] | null[]>([]);
 
     const [imgList, setImgList] = useState<string[]>(initialThumnailList);
+    const [isSlideShow, setIsSlideShow] = useState(false);
+
 
     useEffect(() => {
         console.log(imgRef);
@@ -130,29 +134,51 @@ export default () => {
     const handleGalleryMoreBtn = (event: React.MouseEvent) => {
         setImgList(thumbnailList);
 
-        (event.target as HTMLButtonElement).remove()
+        (event.target as HTMLButtonElement).remove();
+    };
+
+    const handleThumbnailClick = (event: React.MouseEvent) => {
+        console.log((event.target as HTMLElement))
+        console.log((event.target as HTMLElement).getAttribute("data-value"));
+        setIsSlideShow(true);
+
+        /*
+            TODO: 이미지에 해당하는 슬라이드가 먼저 나와야 함. 
+                    <ImageSlidePopup currentSlide="img_4" /> -> 이런식으로 줘서
+        */
+
     };
 
 
-
-    const List = imgList.map((imgName, idx) => {
+    const ThumbnailList = imgList.map((imgName, idx) => {
         const getImgUrl = () => new URL(`../assets/images/thumbnail/${imgName}.jpeg`, import.meta.url).href;
 
         return (
             <GridItem key={idx}>
-                <Img ref={el => imgRef.current[idx] = el} width={600} src={getImgUrl()} alt="갤러리 이미지" />
+                <Img
+                    ref={el => imgRef.current[idx] = el}
+                    width={600}
+                    src={getImgUrl()}
+                    data-value={imgName}
+                    onClick={handleThumbnailClick}
+                    alt="갤러리 이미지"
+                />
             </GridItem>
         )
-    })
+    });
 
 
     return (
         <Content>
             <Title>갤러리</Title>
             <GridContainer>
-                {List}
+                {ThumbnailList}
             </GridContainer>
             <Button onClick={handleGalleryMoreBtn}>갤러리 더보기</Button>
+            {
+                !isSlideShow ? <></> :
+                    <ImageSlidePopup />
+            }
         </Content>
     )
 }
