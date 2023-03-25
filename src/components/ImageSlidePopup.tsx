@@ -137,21 +137,21 @@ const ArrowBtnWrap = styled.div`
 const PrevBtn = styled.button`
     position: fixed;
     left: 0;
-    
+    padding: 0;
     border-bottom: 2px solid #000;
     border-left: 2px solid #000;
     transform: rotate(45deg);
     text-indent: -9999px;
     cursor: pointer;
+    box-sizing: border-box;
     @media(max-width: 500px) {
         width: 16px;
         height: 16px;
-        margin: 15px;
+        left: 20px;
     }
     @media(min-width: 501px) {
         width: 24px;
         height: 24px;
-        margin: 0;
     }
 
     &:hover {
@@ -161,6 +161,7 @@ const PrevBtn = styled.button`
 const NextBtn = styled.button`
     position: fixed;
     right: 0;
+    padding: 0;
     border-bottom: 2px solid #000;
     border-right: 2px solid #000;
     transform: rotate(-45deg);
@@ -170,12 +171,11 @@ const NextBtn = styled.button`
     @media(max-width: 500px) {
         width: 16px;
         height: 16px;
-        margin: 15px;
+        right: 20px;
     }
     @media(min-width: 501px) {
         width: 24px;
         height: 24px;
-        margin: 0;
     }
     &:hover {
         opacity: 0.5;

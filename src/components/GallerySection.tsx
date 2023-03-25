@@ -22,7 +22,7 @@ const GridItem = styled.figure`
     flex-direction: column;
     margin:0;
     box-sizing: border-box;
-    background: #000;
+    background: #fff;
     cursor: pointer;
 
     & > img{
