@@ -182,25 +182,19 @@ const NextBtn = styled.button`
     }
 `;
 
-export default () => {
+export default ({
+    isSlideShow,
+    setIsSlideShow
+}: {
+    isSlideShow: boolean;
+    setIsSlideShow: any;
+}) => {
 
     const imgRef = useRef<HTMLImageElement[] | null[]>([]);
     const imageContainerRef = useRef<HTMLDivElement | null>(null);
     const [imageBoxLeft, setImageBoxLeft] = useState(0);
-    const [isClose, setIsClose] = useState(false);
 
-    // useEffect(() => {
-    //     if (!isClose) {
-    //         document.documentElement.style.overflow = 'hidden';
-    //     }
-
-    //     return () => {
-    //         document.documentElement.style.overflow = 'auto'
-    //     }
-    // }, []);
-
-
-    const handleClose = () => setIsClose(true);
+    const handleClose = () => setIsSlideShow(false);
 
     const handlePrevBtnClick = () => {
         if (imgRef.current[0] && imageContainerRef.current) {
@@ -245,7 +239,7 @@ export default () => {
     });
 
     return (
-        isClose ? <></> :
+        !isSlideShow ? <></> :
             <Container>
                 <Content>
                     <HideTitle>이미지 팝업창</HideTitle>

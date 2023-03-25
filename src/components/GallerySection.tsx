@@ -110,6 +110,11 @@ export default () => {
     const [imgList, setImgList] = useState<string[]>(initialThumnailList);
     const [isSlideShow, setIsSlideShow] = useState(false);
 
+    useEffect(() => {
+        document.documentElement.style.overflow = isSlideShow ? 'hidden' : "auto";
+
+    }, [isSlideShow]);
+
 
     useEffect(() => {
         console.log(imgRef);
@@ -175,10 +180,7 @@ export default () => {
                 {ThumbnailList}
             </GridContainer>
             <Button onClick={handleGalleryMoreBtn}>갤러리 더보기</Button>
-            {
-                !isSlideShow ? <></> :
-                    <ImageSlidePopup />
-            }
+            <ImageSlidePopup isSlideShow={isSlideShow} setIsSlideShow={setIsSlideShow} />
         </Content>
     )
 }
