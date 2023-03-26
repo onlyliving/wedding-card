@@ -144,62 +144,59 @@ export default () => {
 
 
     const observeTarget = useRef(null);
-    const [isShowInput, setIsShowInput] = useState(false);
+    // const [isShowInput, setIsShowInput] = useState(false);
 
-    useEffect(() => {
-        const handleIntersection = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    console.log("entries.isIntersecting");
-                    setIsShowInput(true);
-                } else {
-                    setIsShowInput(false);
-                }
-            })
+    // useEffect(() => {
+    //     const handleIntersection = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
+    //         entries.forEach(entry => {
+    //             if (entry.isIntersecting) {
+    //                 console.log("entries.isIntersecting");
+    //                 setIsShowInput(true);
+    //             } else {
+    //                 setIsShowInput(false);
+    //             }
+    //         })
 
-        }
+    //     }
 
-        const intersectionObserve = new IntersectionObserver(handleIntersection, {
-            root: null,
-            rootMargin: "0px",
-            threshold: 0.3,
-        });
+    //     const intersectionObserve = new IntersectionObserver(handleIntersection, {
+    //         root: null,
+    //         rootMargin: "0px",
+    //         threshold: 0.3,
+    //     });
 
-        if (observeTarget.current) {
-            intersectionObserve.observe(observeTarget.current)
-        }
+    //     if (observeTarget.current) {
+    //         intersectionObserve.observe(observeTarget.current)
+    //     }
 
-        return () => intersectionObserve && intersectionObserve.disconnect();
-    }, []);
+    //     return () => intersectionObserve && intersectionObserve.disconnect();
+    // }, []);
 
 
 
     return (
         <Content ref={observeTarget}>
             <Title >게스트 북</Title>
-            {
-                !isShowInput ? <></> :
-                    <FixedInputBox>
-                        <form onSubmit={handleSubmit}>
-                            <div>
-                                <InputName name="name" type="text" placeholder="이름" onChange={handleChange} value={inputDatas.name} ref={nameRef} />
-                                <Note>{isSubmitEnter && inputDatas.name === "" ? MESSAGE.name : ""}</Note>
-                            </div>
-                            <div>
-                                <Textarea name="content" rows={2} placeholder="축하 내용을 입력해주세요!" onChange={handleChange} value={inputDatas.content} />
-                                <Note>{isSubmitEnter && inputDatas.content === "" ? MESSAGE.content : ""}</Note>
-                            </div>
-                            <SubmitWrap>
-                                <div>
-                                    <InputPw name="password" type="password" placeholder="비밀번호 입력" onChange={handleChange} value={inputDatas.password} />
-                                    <Note>{isSubmitEnter && inputDatas.password === "" ? MESSAGE.password : ""}</Note>
-                                </div>
-                                <Button type="submit">입력</Button>
-                            </SubmitWrap>
-                        </form>
+            <FixedInputBox>
+                <form onSubmit={handleSubmit}>
+                    <div>
+                        <InputName name="name" type="text" placeholder="이름" onChange={handleChange} value={inputDatas.name} ref={nameRef} />
+                        <Note>{isSubmitEnter && inputDatas.name === "" ? MESSAGE.name : ""}</Note>
+                    </div>
+                    <div>
+                        <Textarea name="content" rows={2} placeholder="축하 내용을 입력해주세요!" onChange={handleChange} value={inputDatas.content} />
+                        <Note>{isSubmitEnter && inputDatas.content === "" ? MESSAGE.content : ""}</Note>
+                    </div>
+                    <SubmitWrap>
+                        <div>
+                            <InputPw name="password" type="password" placeholder="비밀번호 입력" onChange={handleChange} value={inputDatas.password} />
+                            <Note>{isSubmitEnter && inputDatas.password === "" ? MESSAGE.password : ""}</Note>
+                        </div>
+                        <Button type="submit">입력</Button>
+                    </SubmitWrap>
+                </form>
 
-                    </FixedInputBox>
-            }
+            </FixedInputBox>
             <section>
                 {guestBooks.map((guestData, guestIndex) => (
                     <ListBox key={`guest-${guestIndex}`}>
