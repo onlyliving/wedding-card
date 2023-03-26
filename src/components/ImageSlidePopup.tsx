@@ -223,9 +223,9 @@ export default ({
     const [imageBoxLeft, setImageBoxLeft] = useState(0);
 
     useEffect(() => {
-        if (imgRef.current[0] && currentSlideNum !== 1) {
+        if (imgRef.current[0]) {
             const imgWidth = imgRef.current[0].width;
-            const initialImgLeftPos = imgWidth * (currentSlideNum - 1) * -1;
+            const initialImgLeftPos = currentSlideNum === 1 ? 0 : imgWidth * (currentSlideNum - 1) * -1;
             setImageBoxLeft(initialImgLeftPos);
         }
 

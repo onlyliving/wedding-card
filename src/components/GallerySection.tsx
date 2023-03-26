@@ -133,7 +133,6 @@ export default () => {
     };
 
     const handleThumbnailClick = (event: React.MouseEvent) => {
-        console.log((event.target as HTMLElement))
         const getValue = (event.target as HTMLElement).getAttribute("data-value") as string;
         setIsSlideShow(true);
 
