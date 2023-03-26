@@ -90,28 +90,34 @@ export default () => {
         introduce: "우리 결혼합니다\n준비된 자세로 배우며 살아가겠습니다\n\n소중한 사람과\n희로애락을 함께 하겠습니다.",
         contact: {
             bridegroom: {
-                tel: "tel:+82 10-5101-2659",
+                tel: "tel:010-5101-2659",
+                sms: "sms:010-5101-2659",
                 parents: {
                     father: {
                         name: "김동필",
-                        tel: "tel:+82 10-4321-0987"
+                        tel: "tel:010-4321-0987",
+                        sms: "sms:010-4321-0987"
                     },
                     mother: {
                         name: "백숙현",
-                        tel: "tel:+82 10-2287-9852"
+                        tel: "tel:010-2287-9852",
+                        sms: "sms:010-2287-9852"
                     },
                 }
             },
             bride: {
-                tel: "tel:+82 10-8900-2019",
+                tel: "tel:010-8900-2019",
+                sms: "sms:010-8900-2019",
                 parents: {
                     father: {
                         name: "김상현",
-                        tel: "tel:+82 10-5141-8109"
+                        tel: "tel:010-5141-8109",
+                        sms: "sms:010-5141-8109"
                     },
                     mother: {
                         name: "김나현",
-                        tel: "tel:+82 10-2251-4026"
+                        tel: "tel:010-2251-4026",
+                        sms: "sms:010-2251-4026"
                     },
                 }
             },
@@ -127,12 +133,12 @@ export default () => {
                         <Name>신랑 김우준</Name>
 
                         <TelLink href={data.contact.bridegroom.tel}></TelLink>
-                        <MsgLink></MsgLink>
+                        <MsgLink href={data.contact.bridegroom.sms}></MsgLink>
                     </Cell>
                     <Cell>
                         <Name>신부 김소희</Name>
                         <TelLink href={data.contact.bride.tel}></TelLink>
-                        <MsgLink></MsgLink>
+                        <MsgLink href={data.contact.bride.sms}></MsgLink>
                     </Cell>
                 </ul>
                 <TwoColumnWrap>
@@ -143,13 +149,13 @@ export default () => {
                                 <Cell>
                                     <BlockSpan>혼주 김동필</BlockSpan>
                                     <TelLink href={data.contact.bridegroom.parents.father.tel}></TelLink>
-                                    <MsgLink></MsgLink>
+                                    <MsgLink href={data.contact.bridegroom.parents.father.sms}></MsgLink>
                                 </Cell>
 
                                 <Cell>
                                     <BlockSpan>혼주 백숙현</BlockSpan>
                                     <TelLink href={data.contact.bridegroom.parents.mother.tel}></TelLink>
-                                    <MsgLink></MsgLink>
+                                    <MsgLink href={data.contact.bridegroom.parents.mother.sms}></MsgLink>
                                 </Cell>
                             </ul>
                         </li>
@@ -162,13 +168,13 @@ export default () => {
                                 <Cell>
                                     <BlockSpan>혼주 김상현</BlockSpan>
                                     <TelLink href={data.contact.bride.parents.father.tel}></TelLink>
-                                    <MsgLink></MsgLink>
+                                    <MsgLink href={data.contact.bride.parents.father.sms}></MsgLink>
                                 </Cell>
 
                                 <Cell>
                                     <BlockSpan>혼주 김나현</BlockSpan>
                                     <TelLink href={data.contact.bride.parents.mother.tel}></TelLink>
-                                    <MsgLink></MsgLink>
+                                    <MsgLink href={data.contact.bride.parents.mother.sms}></MsgLink>
                                 </Cell>
                             </ul>
                         </li>

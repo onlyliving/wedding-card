@@ -4,13 +4,7 @@ import React, { useEffect, useState, useRef } from "react";
 import ImageSlidePopup from "./ImageSlidePopup";
 
 const Content = styled.section`
-    // min-height: 100vh;
     padding: 36px 0;
-`;
-
-const Img = styled.img`
-    // height: 100%;
-    // width: auto;
 `;
 
 const GridItem = styled.figure`
@@ -45,7 +39,6 @@ const GridContainer = styled.div`
     grid-gap: 4px;
     grid-template-columns: repeat(2,1fr);
     grid-auto-rows: 150px;
-    // grid-auto-flow: row dense;
 
     width: 86%;
     margin: 36px auto;
@@ -109,31 +102,28 @@ export default () => {
 
     const [imgList, setImgList] = useState<string[]>(initialThumnailList);
     const [isSlideShow, setIsSlideShow] = useState(false);
+    const [currentSlideNum, setCurrentSlideNum] = useState(0);
 
     useEffect(() => {
         document.documentElement.style.overflow = isSlideShow ? 'hidden' : "auto";
 
     }, [isSlideShow]);
 
-
     useEffect(() => {
-        console.log(imgRef);
-        if (imgRef && imgRef.current && imgRef.current.length !== 0) {
-            imgRef.current.map(item => {
-                const targetImg = item as HTMLImageElement;
-                const getWidth = targetImg.naturalWidth;
-                const getHeight = targetImg.naturalHeight;
-
-                // console.log("getWidth => ", getWidth)
-                // console.log("getHeight => ", getHeight)
-
-                if (getHeight > getWidth) {
-                    targetImg.setAttribute("class", "is-height-long");
-                }
-            })
-        }
+        window.addEventListener("load", () => {
+            if (imgRef && imgRef.current && imgRef.current.length !== 0) {
+                imgRef.current.map(item => {
+                    const targetImg = item as HTMLImageElement;
+                    const getWidth = targetImg.naturalWidth;
+                    const getHeight = targetImg.naturalHeight;
 
 
+                    if (getHeight > getWidth) {
+                        targetImg.setAttribute("class", "is-height-long");
+                    }
+                })
+            }
+        })
     }, []);
 
     const handleGalleryMoreBtn = (event: React.MouseEvent) => {
@@ -144,8 +134,14 @@ export default () => {
 
     const handleThumbnailClick = (event: React.MouseEvent) => {
         console.log((event.target as HTMLElement))
-        console.log((event.target as HTMLElement).getAttribute("data-value"));
+        const getValue = (event.target as HTMLElement).getAttribute("data-value") as string;
         setIsSlideShow(true);
+
+        /**
+         * e.g.
+         * "img_1" -> "img_" 제거, "1" -> number 1로 수정
+         */
+        setCurrentSlideNum(Number(getValue.split("img_")[1]));
 
         /*
             TODO: 이미지에 해당하는 슬라이드가 먼저 나와야 함. 
@@ -160,9 +156,9 @@ export default () => {
 
         return (
             <GridItem key={idx}>
-                <Img
+                <img
                     ref={el => imgRef.current[idx] = el}
-                    width={600}
+                    // width={600}
                     src={getImgUrl()}
                     data-value={imgName}
                     onClick={handleThumbnailClick}
@@ -180,7 +176,11 @@ export default () => {
                 {ThumbnailList}
             </GridContainer>
             <Button onClick={handleGalleryMoreBtn}>갤러리 더보기</Button>
-            <ImageSlidePopup isSlideShow={isSlideShow} setIsSlideShow={setIsSlideShow} />
+            <ImageSlidePopup
+                isSlideShow={isSlideShow}
+                setIsSlideShow={setIsSlideShow}
+                currentSlideNum={currentSlideNum}
+            />
         </Content>
     )
 }

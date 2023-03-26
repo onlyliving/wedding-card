@@ -72,7 +72,7 @@ const Bg = styled.div`
     height: 100%;
     left: 0;
     top: 0;
-    background: rgba(0,0,0,0.5);
+    background: #fff;
     cursor: pointer;
 `;
 
@@ -84,9 +84,7 @@ const HideTitle = styled.h2`
 
 const ImageWrap = styled.div`
     position: absolute;
-    // left: 0;
     height: 100%;
-    // flex-direction: row;
     display: flex;
 `;
 
@@ -98,6 +96,7 @@ const CloseBtn = styled.button`
     top: 0;
     text-indent: -9999px;
     padding: 0;
+    background: #fff;
     &:before,
     &:after {
         content: "";
@@ -115,6 +114,18 @@ const CloseBtn = styled.button`
         transform: translate(-50%, -50%) rotate(-45deg);
     }
 
+    // @media(min-width: 501px) {
+    //     width: 80px;
+    //     height: 80px;
+    //     position:fixed;
+    // }
+
+    @media(min-width: 768px) {
+        width: 80px;
+        height: 80px;
+        position: fixed;
+    }
+
 `;
 
 const ArrowBtnWrap = styled.div`
@@ -127,7 +138,7 @@ const ArrowBtnWrap = styled.div`
     transform: translateX(-50%);
     @media(max-width: 500px) {
         max-width: 500px;
-
+        height: 100%;
     }
     @media(min-width: 501px) {
         max-width: 600px;
@@ -138,20 +149,28 @@ const PrevBtn = styled.button`
     position: fixed;
     left: 0;
     padding: 0;
-    border-bottom: 2px solid #000;
-    border-left: 2px solid #000;
-    transform: rotate(45deg);
+    width: 60px;
+    height: 100%;
     text-indent: -9999px;
     cursor: pointer;
     box-sizing: border-box;
-    @media(max-width: 500px) {
+
+    &:before {
+        content: '';
         width: 16px;
         height: 16px;
-        left: 20px;
+        border-bottom: 1px solid #000;
+        border-right: 1px solid #000;
+        transform: rotate(135deg);
+        display: block;
+        text-indent: -9999px;
+        position: absolute;
+        left: 23px;
+    }
+
+    @media(max-width: 500px) {
     }
     @media(min-width: 501px) {
-        width: 24px;
-        height: 24px;
     }
 
     &:hover {
@@ -162,20 +181,27 @@ const NextBtn = styled.button`
     position: fixed;
     right: 0;
     padding: 0;
-    border-bottom: 2px solid #000;
-    border-right: 2px solid #000;
-    transform: rotate(-45deg);
+    width: 60px;
+    height: 100%;
     text-indent: -9999px;
     cursor: pointer;
 
-    @media(max-width: 500px) {
+    &:before {
+        content: '';
         width: 16px;
         height: 16px;
-        right: 20px;
+        border-bottom: 1px solid #000;
+        border-right: 1px solid #000;
+        transform: rotate(-45deg);
+        display: block;
+        text-indent: -9999px;
+        position: absolute;
+        left: 15px;
+    }
+
+    @media(max-width: 500px) {
     }
     @media(min-width: 501px) {
-        width: 24px;
-        height: 24px;
     }
     &:hover {
         opacity: 0.5;
@@ -184,26 +210,40 @@ const NextBtn = styled.button`
 
 export default ({
     isSlideShow,
-    setIsSlideShow
+    setIsSlideShow,
+    currentSlideNum
 }: {
     isSlideShow: boolean;
     setIsSlideShow: any;
+    currentSlideNum: number;
 }) => {
 
     const imgRef = useRef<HTMLImageElement[] | null[]>([]);
     const imageContainerRef = useRef<HTMLDivElement | null>(null);
     const [imageBoxLeft, setImageBoxLeft] = useState(0);
 
+    useEffect(() => {
+        if (imgRef.current[0] && currentSlideNum !== 1) {
+            const imgWidth = imgRef.current[0].width;
+            const initialImgLeftPos = imgWidth * (currentSlideNum - 1) * -1;
+            setImageBoxLeft(initialImgLeftPos);
+        }
+
+    }, [isSlideShow]);
+
+
     const handleClose = () => setIsSlideShow(false);
 
     const handlePrevBtnClick = () => {
         if (imgRef.current[0] && imageContainerRef.current) {
+            const imgWidth = imgRef.current[0].width;
+
             if (imageBoxLeft === 0) {
-                const lastPos = (imageContainerRef.current.getBoundingClientRect().width * -1) + imgRef.current[0].width;
+                const lastPos = (imageContainerRef.current.getBoundingClientRect().width * -1) + imgWidth;
                 setImageBoxLeft(lastPos);
 
             } else {
-                const newPos = imageBoxLeft + imgRef.current[0].width;
+                const newPos = imageBoxLeft + imgWidth;
                 setImageBoxLeft(newPos);
             }
         }
@@ -211,11 +251,13 @@ export default ({
 
     const handleNextBtnClick = () => {
         if (imgRef.current[0] && imageContainerRef.current) {
-            if (imageContainerRef.current.getBoundingClientRect().width <= Math.abs(imageBoxLeft) + imgRef.current[0].width) {
+            const imgWidth = imgRef.current[0].width;
+            console.log("imgWidth => ", imgWidth);
+            if (imageContainerRef.current.getBoundingClientRect().width <= Math.abs(imageBoxLeft) + imgWidth) {
                 setImageBoxLeft(0);
 
             } else {
-                const newPos = imageBoxLeft - imgRef.current[0].width;
+                const newPos = imageBoxLeft - imgWidth;
                 setImageBoxLeft(newPos);
             }
         }
@@ -228,7 +270,7 @@ export default ({
             <GridItem key={idx}>
                 <img
                     ref={el => imgRef.current[idx] = el}
-                    width={600}
+                    // width={600}
                     src={getImgUrl()}
                     data-value={imgName}
                     // onClick={handleThumbnailClick}
