@@ -5,7 +5,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./styles/global.scss";
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+root.render(
     <RecoilRoot>
         <BrowserRouter basename="/wedding-card">
             <Routes>
