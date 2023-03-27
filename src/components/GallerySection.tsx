@@ -164,7 +164,7 @@ export default () => {
 
     return (
         <Content>
-            <Title>갤러리</Title>
+            <Title>갤러리 1</Title>
             <GridContainer>
                 {ThumbnailList}
             </GridContainer>

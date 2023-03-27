@@ -227,6 +227,8 @@ export default ({
             const imgWidth = imgRef.current[0].width;
             const initialImgLeftPos = currentSlideNum === 1 ? 0 : imgWidth * (currentSlideNum - 1) * -1;
             setImageBoxLeft(initialImgLeftPos);
+
+            console.log("currentSlideNum => ", currentSlideNum)
         }
 
     }, [isSlideShow]);
