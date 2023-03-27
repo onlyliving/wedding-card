@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useRef } from "react";
 import styled from "styled-components";
 
 import { useGuestBook } from "../hooks/useGuestBook";
@@ -129,8 +129,6 @@ const MESSAGE = {
     password: "비밀번호를 입력해주세요. (메세지 삭제할 때 필요)"
 };
 
-
-
 export default () => {
     const {
         handleSubmit,
@@ -144,35 +142,6 @@ export default () => {
 
 
     const observeTarget = useRef(null);
-    // const [isShowInput, setIsShowInput] = useState(false);
-
-    // useEffect(() => {
-    //     const handleIntersection = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
-    //         entries.forEach(entry => {
-    //             if (entry.isIntersecting) {
-    //                 console.log("entries.isIntersecting");
-    //                 setIsShowInput(true);
-    //             } else {
-    //                 setIsShowInput(false);
-    //             }
-    //         })
-
-    //     }
-
-    //     const intersectionObserve = new IntersectionObserver(handleIntersection, {
-    //         root: null,
-    //         rootMargin: "0px",
-    //         threshold: 0.3,
-    //     });
-
-    //     if (observeTarget.current) {
-    //         intersectionObserve.observe(observeTarget.current)
-    //     }
-
-    //     return () => intersectionObserve && intersectionObserve.disconnect();
-    // }, []);
-
-
 
     return (
         <Content ref={observeTarget}>

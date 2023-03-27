@@ -141,12 +141,6 @@ export default () => {
          * "img_1" -> "img_" 제거, "1" -> number 1로 수정
          */
         setCurrentSlideNum(Number(getValue.split("img_")[1]));
-
-        /*
-            TODO: 이미지에 해당하는 슬라이드가 먼저 나와야 함. 
-                    <ImageSlidePopup currentSlide="img_4" /> -> 이런식으로 줘서
-        */
-
     };
 
 
