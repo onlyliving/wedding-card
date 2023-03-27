@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useState, useRef } from "react";
 
 import ImageSlidePopup from "./ImageSlidePopup";
 
@@ -109,21 +109,31 @@ export default () => {
 
     }, [isSlideShow]);
 
+    const setImgAddHeightLong = () => {
+        if (imgRef && imgRef.current && imgRef.current.length !== 0) {
+            imgRef.current.map(item => {
+                const targetImg = item as HTMLImageElement;
+                const getWidth = targetImg.naturalWidth;
+                const getHeight = targetImg.naturalHeight;
+
+                if (getHeight > getWidth) {
+                    targetImg.setAttribute("class", "is-height-long");
+                }
+            })
+        }
+    }
+
     useEffect(() => {
-        window.addEventListener("load", () => {
-            if (imgRef && imgRef.current && imgRef.current.length !== 0) {
-                imgRef.current.map(item => {
-                    const targetImg = item as HTMLImageElement;
-                    const getWidth = targetImg.naturalWidth;
-                    const getHeight = targetImg.naturalHeight;
+        if (document.readyState === "complete") {
+            // safari
+            setImgAddHeightLong();
+
+        } else {
+            // chrome
+            window.addEventListener("load", setImgAddHeightLong);
+        }
 
 
-                    if (getHeight > getWidth) {
-                        targetImg.setAttribute("class", "is-height-long");
-                    }
-                })
-            }
-        })
     }, []);
 
     const handleGalleryMoreBtn = (event: React.MouseEvent) => {
@@ -135,12 +145,8 @@ export default () => {
     const handleThumbnailClick = (event: React.MouseEvent) => {
         const getValue = (event.target as HTMLElement).getAttribute("data-value") as string;
         setIsSlideShow(true);
-
-        /**
-         * e.g.
-         * "img_1" -> "img_" 제거, "1" -> number 1로 수정
-         */
-        setCurrentSlideNum(Number(getValue.split("img_")[1]));
+        const getNum = Number(getValue.split("img_")[1]);
+        setCurrentSlideNum(getNum);
     };
 
 
@@ -164,7 +170,7 @@ export default () => {
 
     return (
         <Content>
-            <Title>갤러리 1</Title>
+            <Title>갤러리</Title>
             <GridContainer>
                 {ThumbnailList}
             </GridContainer>

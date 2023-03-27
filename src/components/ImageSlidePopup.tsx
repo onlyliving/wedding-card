@@ -224,11 +224,9 @@ export default ({
 
     useEffect(() => {
         if (imgRef.current[0]) {
-            const imgWidth = imgRef.current[0].width;
+            const imgWidth = imgRef.current[0].getBoundingClientRect().width;
             const initialImgLeftPos = currentSlideNum === 1 ? 0 : imgWidth * (currentSlideNum - 1) * -1;
             setImageBoxLeft(initialImgLeftPos);
-
-            console.log("currentSlideNum => ", currentSlideNum)
         }
 
     }, [isSlideShow]);
@@ -254,7 +252,6 @@ export default ({
     const handleNextBtnClick = () => {
         if (imgRef.current[0] && imageContainerRef.current) {
             const imgWidth = imgRef.current[0].width;
-            console.log("imgWidth => ", imgWidth);
             if (imageContainerRef.current.getBoundingClientRect().width <= Math.abs(imageBoxLeft) + imgWidth) {
                 setImageBoxLeft(0);
 
