@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, MouseEventHandler } from "react";
 
 const imageList = [
     "img_1",
@@ -83,12 +83,14 @@ const HideTitle = styled.h2`
 `;
 
 const ImageWrap = styled.div`
+    // z-index: 2;
     position: absolute;
     height: 100%;
     display: flex;
 `;
 
 const CloseBtn = styled.button`
+    z-index: 999;
     width: 50px;
     height: 50px;
     position:absolute;
@@ -96,7 +98,6 @@ const CloseBtn = styled.button`
     top: 0;
     text-indent: -9999px;
     padding: 0;
-    background: #fff;
     &:before,
     &:after {
         content: "";
@@ -129,6 +130,7 @@ const CloseBtn = styled.button`
 `;
 
 const ArrowBtnWrap = styled.div`
+    pointer-events : none;
     width: 100%;
     display: flex;
     align-items: center;
@@ -146,6 +148,8 @@ const ArrowBtnWrap = styled.div`
 `;
 
 const PrevBtn = styled.button`
+    pointer-events : all;
+    z-inxex: 10;
     position: fixed;
     left: 0;
     padding: 0;
@@ -178,6 +182,8 @@ const PrevBtn = styled.button`
     }
 `;
 const NextBtn = styled.button`
+    pointer-events : all;
+    z-inxex: 10;
     position: fixed;
     right: 0;
     padding: 0;
@@ -222,24 +228,18 @@ export default ({
     const imageContainerRef = useRef<HTMLDivElement | null>(null);
     const [imageBoxLeft, setImageBoxLeft] = useState(0);
 
-    useEffect(() => {
-        if (imgRef.current[0]) {
-            const imgWidth = imgRef.current[0].getBoundingClientRect().width;
-            const initialImgLeftPos = currentSlideNum === 1 ? 0 : imgWidth * (currentSlideNum - 1) * -1;
-            setImageBoxLeft(initialImgLeftPos);
-        }
 
-    }, [isSlideShow]);
+    const handlePrevMove = () => {
+        // console.log("handlePrevMove");
 
-
-    const handleClose = () => setIsSlideShow(false);
-
-    const handlePrevBtnClick = () => {
         if (imgRef.current[0] && imageContainerRef.current) {
-            const imgWidth = imgRef.current[0].width;
-
+            const imgWidth = imgRef.current[0].getBoundingClientRect().width;
+            const imageContainerWidth = imageContainerRef.current.getBoundingClientRect().width;
+            // console.log(imgWidth);
+            // console.log(imageContainerWidth);
+            // console.log(imageBoxLeft);
             if (imageBoxLeft === 0) {
-                const lastPos = (imageContainerRef.current.getBoundingClientRect().width * -1) + imgWidth;
+                const lastPos = (imageContainerWidth * -1) + imgWidth;
                 setImageBoxLeft(lastPos);
 
             } else {
@@ -249,10 +249,13 @@ export default ({
         }
     }
 
-    const handleNextBtnClick = () => {
+    const handleNextMove = () => {
+        // console.log("handleNextMove");
         if (imgRef.current[0] && imageContainerRef.current) {
-            const imgWidth = imgRef.current[0].width;
-            if (imageContainerRef.current.getBoundingClientRect().width <= Math.abs(imageBoxLeft) + imgWidth) {
+            const imgWidth = imgRef.current[0].getBoundingClientRect().width;
+            const imageContainerWidth = imageContainerRef.current.getBoundingClientRect().width;
+
+            if (imageContainerWidth <= Math.abs(imageBoxLeft) + imgWidth) {
                 setImageBoxLeft(0);
 
             } else {
@@ -262,6 +265,67 @@ export default ({
         }
     };
 
+    useEffect(() => {
+        if (isSlideShow) {
+            if (imgRef.current[0]) {
+                const imgWidth = imgRef.current[0].getBoundingClientRect().width;
+                const initialImgLeftPos = currentSlideNum === 1 ? 0 : imgWidth * (currentSlideNum - 1) * -1;
+                setImageBoxLeft(initialImgLeftPos);
+            }
+        }
+
+
+    }, [isSlideShow]);
+
+    let startPoint = 0;
+    let endPoint = 0;
+
+    const handleMouseDown = (event: React.MouseEvent<HTMLDivElement>) => {
+        // console.log("handleMouseDown");
+        startPoint = event.pageX;
+    };
+
+    const slideEvent = (startPoint: number, endPoint: number) => {
+        // console.log("slideEvent");
+        if (startPoint == endPoint) return;
+        if (startPoint < endPoint) {
+            // console.log("prev move");
+            handlePrevMove();
+        } else {
+            // console.log("next move");
+            handleNextMove();
+        }
+    }
+
+    const handleMouseUp = (event: React.MouseEvent<HTMLDivElement>) => {
+        endPoint = event.pageX;
+        slideEvent(startPoint, endPoint);
+    };
+
+    let isTouchTwoPointsMoreThan = false;
+    const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
+        // console.log("handleTouchStart - event.touches.length => ", event.touches.length);
+        if (event.touches.length > 1) {
+            // 2점 이상 터치할 때 - 슬라이드 되지 않도록 함
+            isTouchTwoPointsMoreThan = true;
+            event.isPropagationStopped();
+            return;
+        }
+
+        isTouchTwoPointsMoreThan = false;
+        startPoint = event.touches[0].pageX;
+    };
+
+    const handleTouchEnd = (event: React.TouchEvent<HTMLDivElement>) => {
+        // console.log("handleTouchEnd - event.touches => ", event.touches);
+        if (isTouchTwoPointsMoreThan) return;
+
+        endPoint = event.changedTouches[0].pageX;
+        slideEvent(startPoint, endPoint);
+    };
+
+    const handleClose = () => setIsSlideShow(false);
+
     const ImageList = imageList.map((imgName, idx) => {
         const getImgUrl = () => new URL(`../assets/images/${imgName}.jpeg`, import.meta.url).href;
 
@@ -269,10 +333,8 @@ export default ({
             <GridItem key={idx}>
                 <img
                     ref={el => imgRef.current[idx] = el}
-                    // width={600}
                     src={getImgUrl()}
                     data-value={imgName}
-                    // onClick={handleThumbnailClick}
                     alt="갤러리 이미지"
                 />
             </GridItem>
@@ -284,12 +346,20 @@ export default ({
             <Container>
                 <Content>
                     <HideTitle>이미지 팝업창</HideTitle>
-                    <ImageWrap ref={imageContainerRef} style={{ left: imageBoxLeft }}>
+                    <ImageWrap
+                        ref={imageContainerRef}
+                        style={{ left: imageBoxLeft }}
+                        onMouseDown={handleMouseDown}
+                        onMouseUp={handleMouseUp}
+                        onTouchStart={handleTouchStart}
+                        onTouchEnd={handleTouchEnd}
+
+                    >
                         {ImageList}
                     </ImageWrap>
                     <ArrowBtnWrap>
-                        <PrevBtn onClick={handlePrevBtnClick}>이전</PrevBtn>
-                        <NextBtn onClick={handleNextBtnClick}>다음</NextBtn>
+                        <PrevBtn onClick={handlePrevMove}>이전</PrevBtn>
+                        <NextBtn onClick={handleNextMove}>다음</NextBtn>
                     </ArrowBtnWrap>
                     <CloseBtn onClick={handleClose}>팝업창 닫기</CloseBtn>
                 </Content>
