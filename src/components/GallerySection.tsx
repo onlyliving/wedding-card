@@ -5,6 +5,11 @@ import ImageSlidePopup from "./ImageSlidePopup";
 
 const Content = styled.section`
     padding: 36px 0;
+
+    margin: 10px;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+    border-radius: 14px;
+    background-color:#fff;
 `;
 
 const GridItem = styled.figure`
@@ -169,7 +174,7 @@ export default () => {
 
 
     return (
-        <Content>
+        <Content data-scroll>
             <Title>갤러리</Title>
             <GridContainer>
                 {ThumbnailList}

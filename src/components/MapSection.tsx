@@ -3,8 +3,12 @@ import styled from "styled-components";
 import Map from "./Map";
 
 const Content = styled.section`
-    background: #f7f7f7;
     padding: 36px 0;
+
+    margin: 10px;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+    border-radius: 14px;
+    background-color:#fff;
 `;
 
 const Title = styled.h2`
@@ -43,7 +47,7 @@ const ContentWrap = styled.div`
 
 export default () => {
     return (
-        <Content>
+        <Content data-scroll>
             <Title>오시는 길</Title>
             {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.1059634285725!2d127.10447265135012!3d37.33999997974192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b59eb77ad0e33%3A0x935499ac4503c9cb!2z67aE64u57JWk7Iqk7YCY7Ja0IOybqOuUqe2ZgA!5e0!3m2!1sko!2skr!4v1675404402944!5m2!1sko!2skr" width="800" height="600" style={{ border: 0, width: "100%" }} loading="lazy" referrerPolicy="no-referrer-when-downgrade" /> */}
             <Map />

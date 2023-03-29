@@ -9,11 +9,16 @@
         "deploy": "gh-pages -d dist"
     },
     "dependencies": {
+        "@types/rellax": "^1.7.4",
+        "@types/splitting": "^1.0.1",
         "axios": "^1.2.5",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-router-dom": "^6.8.0",
         "recoil": "^0.7.6",
+        "rellax": "^1.12.1",
+        "scroll-out": "^2.2.12",
+        "splitting": "^1.0.6",
         "vite-plugin-html": "^3.2.0"
     },
     "devDependencies": {

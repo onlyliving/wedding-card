@@ -6,6 +6,11 @@ const Content = styled.section`
     align-items: center;
     flex-direction: column;
     color: #5e5e5e;
+
+    margin: 10px;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+    border-radius: 14px;
+    background-color:#fff;
 `;
 
 const TextBox = styled.p`
@@ -70,7 +75,7 @@ export default () => {
     ];
 
     return (
-        <Content>
+        <Content data-scroll>
             <HideTitle>소개글</HideTitle>
             <TextBox>
                 <PointText>우</PointText>리 결혼합니다.<br />

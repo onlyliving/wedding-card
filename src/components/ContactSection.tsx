@@ -10,8 +10,12 @@ const Content = styled.section`
     justify-content: center;
     display: flex;
     flex-direction: column;
-    background-color: #f7f7f7;
     text-align: center;
+    
+    margin: 10px;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+    border-radius: 14px;
+    background-color:#fff;
 `;
 
 const MsgLink = styled.a`
@@ -60,7 +64,7 @@ const TwoColumnWrap = styled.div`
 
 const ContactWrap = styled.div`
     width: 100%;
-    margin: 36px auto;
+    margin: 36px auto 0;
 `;
 
 const SubTitle = styled.h3`
@@ -125,7 +129,7 @@ export default () => {
     };
 
     return (
-        <Content>
+        <Content data-scroll>
             <Title>축하 연락처</Title>
             <ContactWrap>
                 <ul>

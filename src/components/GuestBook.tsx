@@ -6,7 +6,11 @@ import { useGuestBook } from "../hooks/useGuestBook";
 const Content = styled.section`
     padding: 36px 16px;
     font-size: 16px;
-    background: #f7f7f7;
+
+    margin: 10px;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+    border-radius: 14px;
+    background-color:#fff;
 `;
 
 const FixedInputBox = styled.div`
@@ -17,14 +21,14 @@ const FixedInputBox = styled.div`
     margin: 16px auto;
     width: 100%;
     max-width: 500px;
-    background: #f7f7f7;
+    background: #fff;
 `;
 
 const InputName = styled.input`
     width: 100%;
     padding: 8px;
     font-size: 16px;
-    border: 1px solid #000;
+    border-bottom: 1px solid #000;
     box-sizing: border-box;
 `;
 
@@ -33,7 +37,8 @@ const Textarea = styled.textarea`
     resize: none;
     padding: 8px;
     font-size: 16px;
-    border: 1px solid #000;
+    border: 0;
+    border-bottom: 1px solid #000;
     box-sizing: border-box;
 `;
 
@@ -41,7 +46,7 @@ const InputPw = styled.input`
     width: 100%;
     padding: 8px;
     font-size: 16px;
-    border: 1px solid #000;
+    border-bottom: 1px solid #000;
     box-sizing: border-box;
 `;
 
@@ -51,7 +56,7 @@ const SubmitWrap = styled.div`
 `;
 
 const Button = styled.button`
-    height: 42px;
+    height: 41px;
     background: #000;
     color: #fff;
     font-weight: bold;
@@ -144,7 +149,7 @@ export default () => {
     const observeTarget = useRef(null);
 
     return (
-        <Content ref={observeTarget}>
+        <Content data-scroll ref={observeTarget}>
             <Title >게스트 북</Title>
             <FixedInputBox>
                 <form onSubmit={handleSubmit}>

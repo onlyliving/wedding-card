@@ -1,17 +1,25 @@
 import styled from "styled-components";
+import Rellax from "rellax";
 
 import bgImg from "../assets/images/bg.jpg";
+import { useEffect, useRef } from "react";
 
 const Content = styled.section`
-    min-height: 640px;
+    position: relative;
+    min-height: calc(640px - 20px);
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
     background: url(${bgImg}) no-repeat center/cover;
+
+    margin: 10px;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+    border-radius: 14px;
 `;
 
 const Strong = styled.strong`
+    z-index: 2;
     font-size: 20px;
 `;
 
@@ -22,11 +30,19 @@ const SubText = styled.span`
 `;
 
 const Info = styled.p`
+    z-index: 2;
     margin: 16px auto;
 `;
 
 const Dday = styled.p`
+    z-index: 1;
     font-style: italic;
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    color: #fff;
 `;
 
 const HideTitle = styled.h2`
@@ -37,6 +53,25 @@ const HideTitle = styled.h2`
 
 
 export default () => {
+
+    const rellaxRef = useRef<HTMLElement[] | null[]>([]);
+
+    useEffect(() => {
+        if (rellaxRef.current) {
+            rellaxRef.current.map(el => {
+                const rellax = new Rellax((el as HTMLElement), {
+                    speed: -2,
+                    center: false,
+                    // wrapper: null,
+                    round: true,
+                    vertical: true,
+                    horizontal: false
+                });
+            })
+
+        }
+
+    }, []);
 
     const data = {
         bridegroom: "김우준",
@@ -64,14 +99,23 @@ export default () => {
     return (
         <Content>
             <HideTitle>메인페이지</HideTitle>
-            <Strong>
+            <Strong
+                ref={el => rellaxRef.current[0] = el}
+                data-rellax-speed="-3"
+            >
                 우준<SubText>and</SubText>소희
             </Strong>
-            <Info>
+            <Info
+                ref={el => rellaxRef.current[1] = el}
+                data-rellax-speed="-3"
+            >
                 {getDDay().weddingDay}<br />
                 {data["place"]}
             </Info>
-            <Dday>D - {getDDay().dday}</Dday>
+            <Dday
+                ref={el => rellaxRef.current[2] = el}
+                data-rellax-speed="4"
+            >D - {getDDay().dday}</Dday>
         </Content>
     )
 }
