@@ -8,7 +8,7 @@ import{j as E,s as t,r,a as I,R as H,l as N,c as W,b as K,B as X,d as q,e as J}f
     text-align: center;
     
     margin: 10px;
-    box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 0 1px rgba(32, 71, 84, 0.03), 0px 0px 0 3px rgba(32, 71, 84, 0.02);;
     border-radius: 14px;
     background-color:#fff;
 `,k=t.a`
@@ -65,7 +65,7 @@ import{j as E,s as t,r,a as I,R as H,l as N,c as W,b as K,B as X,d as q,e as J}f
 준비된 자세로 배우며 살아가겠습니다
 
 소중한 사람과
-희로애락을 함께 하겠습니다.`,contact:{bridegroom:{tel:"tel:010-5101-2659",sms:"sms:010-5101-2659",parents:{father:{name:"김동필",tel:"tel:010-4321-0987",sms:"sms:010-4321-0987"},mother:{name:"백숙현",tel:"tel:010-2287-9852",sms:"sms:010-2287-9852"}}},bride:{tel:"tel:010-8900-2019",sms:"sms:010-8900-2019",parents:{father:{name:"김상현",tel:"tel:010-5141-8109",sms:"sms:010-5141-8109"},mother:{name:"김나현",tel:"tel:010-2251-4026",sms:"sms:010-2251-4026"}}}}};return i(Y,{"data-scroll":!0,children:[e(te,{children:"축하 연락처"}),i(ee,{children:[i("ul",{children:[i(B,{children:[e(L,{children:"신랑 김우준"}),e(C,{href:n.contact.bridegroom.tel}),e(k,{href:n.contact.bridegroom.sms})]}),i(B,{children:[e(L,{children:"신부 김소희"}),e(C,{href:n.contact.bride.tel}),e(k,{href:n.contact.bride.sms})]})]}),i(Z,{children:[e("ul",{children:i("li",{children:[e(M,{children:"신랑측 혼주"}),i("ul",{children:[i(B,{children:[e(R,{children:"혼주 김동필"}),e(C,{href:n.contact.bridegroom.parents.father.tel}),e(k,{href:n.contact.bridegroom.parents.father.sms})]}),i(B,{children:[e(R,{children:"혼주 백숙현"}),e(C,{href:n.contact.bridegroom.parents.mother.tel}),e(k,{href:n.contact.bridegroom.parents.mother.sms})]})]})]})}),e("ul",{children:i("li",{children:[e(M,{children:"신부측 혼주"}),i("ul",{children:[i(B,{children:[e(R,{children:"혼주 김상현"}),e(C,{href:n.contact.bride.parents.father.tel}),e(k,{href:n.contact.bride.parents.father.sms})]}),i(B,{children:[e(R,{children:"혼주 김나현"}),e(C,{href:n.contact.bride.parents.mother.tel}),e(k,{href:n.contact.bride.parents.mother.sms})]})]})]})})]})]})]})},ie="/wedding-card/assets/img_1-a4ac0188.jpeg",oe="/wedding-card/assets/img_10-204ee8ad.jpeg",se="/wedding-card/assets/img_11-31764165.jpeg",ae="/wedding-card/assets/img_12-657798e6.jpeg",re="/wedding-card/assets/img_13-98a2ac28.jpeg",de="/wedding-card/assets/img_14-a9168eb5.jpeg",ce="/wedding-card/assets/img_2-6f1d3554.jpeg",le="/wedding-card/assets/img_3-18d9c9f5.jpeg",ge="/wedding-card/assets/img_4-0b2a4ae3.jpeg",pe="/wedding-card/assets/img_5-d161d436.jpeg",me="/wedding-card/assets/img_6-3efe16b5.jpeg",he="/wedding-card/assets/img_7-f218db53.jpeg",Ae="/wedding-card/assets/img_8-9fdc64f4.jpeg",ue="/wedding-card/assets/img_9-d0987053.jpeg",fe="/wedding-card/assets/img_1-f2fd50ed.jpeg",xe="/wedding-card/assets/img_10-07ef3720.jpeg",be="/wedding-card/assets/img_11-23b737a3.jpeg",_e="/wedding-card/assets/img_12-bbd14a5b.jpeg",we="/wedding-card/assets/img_13-00b68755.jpeg",ve="/wedding-card/assets/img_14-6f8687a2.jpeg",ye="/wedding-card/assets/img_2-8701a851.jpeg",je="/wedding-card/assets/img_3-5d0c5887.jpeg",ke="/wedding-card/assets/img_4-096dadeb.jpeg",Ce="/wedding-card/assets/img_5-2f5549e0.jpeg",Be="/wedding-card/assets/img_6-7d280603.jpeg",Re="/wedding-card/assets/img_7-f89f825a.jpeg",Se="/wedding-card/assets/img_8-78cd6d2c.jpeg",Te="/wedding-card/assets/img_9-df12a285.jpeg",$e=["img_1","img_2","img_3","img_4","img_5","img_6","img_7","img_8","img_9","img_10","img_11","img_12","img_13","img_14"],ze=t.figure`
+희로애락을 함께 하겠습니다.`,contact:{bridegroom:{tel:"tel:010-5101-2659",sms:"sms:010-5101-2659",parents:{father:{name:"김동필",tel:"tel:010-4321-0987",sms:"sms:010-4321-0987"},mother:{name:"백숙현",tel:"tel:010-2287-9852",sms:"sms:010-2287-9852"}}},bride:{tel:"tel:010-8900-2019",sms:"sms:010-8900-2019",parents:{father:{name:"김상현",tel:"tel:010-5141-8109",sms:"sms:010-5141-8109"},mother:{name:"김나현",tel:"tel:010-2251-4026",sms:"sms:010-2251-4026"}}}}};return i(Y,{"data-scroll":!0,children:[e(te,{children:"축하 연락처"}),i(ee,{children:[i("ul",{children:[i(B,{children:[e(L,{children:"신랑 김우준"}),e(C,{href:n.contact.bridegroom.tel}),e(k,{href:n.contact.bridegroom.sms})]}),i(B,{children:[e(L,{children:"신부 김소희"}),e(C,{href:n.contact.bride.tel}),e(k,{href:n.contact.bride.sms})]})]}),i(Z,{children:[e("ul",{children:i("li",{children:[e(M,{children:"신랑측 혼주"}),i("ul",{children:[i(B,{children:[e(R,{children:"혼주 김동필"}),e(C,{href:n.contact.bridegroom.parents.father.tel}),e(k,{href:n.contact.bridegroom.parents.father.sms})]}),i(B,{children:[e(R,{children:"혼주 백숙현"}),e(C,{href:n.contact.bridegroom.parents.mother.tel}),e(k,{href:n.contact.bridegroom.parents.mother.sms})]})]})]})}),e("ul",{children:i("li",{children:[e(M,{children:"신부측 혼주"}),i("ul",{children:[i(B,{children:[e(R,{children:"혼주 김상현"}),e(C,{href:n.contact.bride.parents.father.tel}),e(k,{href:n.contact.bride.parents.father.sms})]}),i(B,{children:[e(R,{children:"혼주 김나현"}),e(C,{href:n.contact.bride.parents.mother.tel}),e(k,{href:n.contact.bride.parents.mother.sms})]})]})]})})]})]})]})},ie="/wedding-card/assets/img_1-a4ac0188.jpeg",oe="/wedding-card/assets/img_10-204ee8ad.jpeg",se="/wedding-card/assets/img_11-31764165.jpeg",ae="/wedding-card/assets/img_12-657798e6.jpeg",re="/wedding-card/assets/img_13-98a2ac28.jpeg",de="/wedding-card/assets/img_14-a9168eb5.jpeg",ce="/wedding-card/assets/img_2-6f1d3554.jpeg",le="/wedding-card/assets/img_3-18d9c9f5.jpeg",ge="/wedding-card/assets/img_4-0b2a4ae3.jpeg",pe="/wedding-card/assets/img_5-d161d436.jpeg",me="/wedding-card/assets/img_6-3efe16b5.jpeg",he="/wedding-card/assets/img_7-f218db53.jpeg",Ae="/wedding-card/assets/img_8-9fdc64f4.jpeg",ue="/wedding-card/assets/img_9-d0987053.jpeg",xe="/wedding-card/assets/img_1-f2fd50ed.jpeg",fe="/wedding-card/assets/img_10-07ef3720.jpeg",be="/wedding-card/assets/img_11-23b737a3.jpeg",_e="/wedding-card/assets/img_12-bbd14a5b.jpeg",we="/wedding-card/assets/img_13-00b68755.jpeg",ve="/wedding-card/assets/img_14-6f8687a2.jpeg",ye="/wedding-card/assets/img_2-8701a851.jpeg",je="/wedding-card/assets/img_3-5d0c5887.jpeg",ke="/wedding-card/assets/img_4-096dadeb.jpeg",Ce="/wedding-card/assets/img_5-2f5549e0.jpeg",Be="/wedding-card/assets/img_6-7d280603.jpeg",Re="/wedding-card/assets/img_7-f89f825a.jpeg",Se="/wedding-card/assets/img_8-78cd6d2c.jpeg",Te="/wedding-card/assets/img_9-df12a285.jpeg",$e=["img_1","img_2","img_3","img_4","img_5","img_6","img_7","img_8","img_9","img_10","img_11","img_12","img_13","img_14"],ze=t.figure`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -242,11 +242,11 @@ import{j as E,s as t,r,a as I,R as H,l as N,c as W,b as K,B as X,d as q,e as J}f
     &:hover {
         opacity: 0.5;
     }
-`,Oe=({isSlideShow:n,setIsSlideShow:d,currentSlideNum:c})=>{const o=r.useRef([]),s=r.useRef(null),[a,g]=r.useState(0),u=()=>{if(o.current[0]&&s.current){const l=o.current[0].getBoundingClientRect().width,b=s.current.getBoundingClientRect().width;if(a===0){const j=b*-1+l;g(j)}else{const j=a+l;g(j)}}},m=()=>{if(o.current[0]&&s.current){const l=o.current[0].getBoundingClientRect().width;if(s.current.getBoundingClientRect().width<=Math.abs(a)+l)g(0);else{const j=a-l;g(j)}}};r.useEffect(()=>{if(n&&o.current[0]){const l=o.current[0].getBoundingClientRect().width,b=c===1?0:l*(c-1)*-1;g(b)}},[n]);let h=0,_=0;const f=l=>{h=l.pageX},A=(l,b)=>{l!=b&&(l<b?u():m())},w=l=>{_=l.pageX,A(h,_)};let p=!1;const x=l=>{if(l.touches.length>1){p=!0,l.isPropagationStopped();return}p=!1,h=l.touches[0].pageX},v=l=>{p||(_=l.changedTouches[0].pageX,A(h,_))},y=()=>d(!1),F=$e.map((l,b)=>e(ze,{children:e("img",{ref:O=>o.current[b]=O,src:(()=>new URL(Object.assign({"../assets/images/img_1.jpeg":fe,"../assets/images/img_10.jpeg":xe,"../assets/images/img_11.jpeg":be,"../assets/images/img_12.jpeg":_e,"../assets/images/img_13.jpeg":we,"../assets/images/img_14.jpeg":ve,"../assets/images/img_2.jpeg":ye,"../assets/images/img_3.jpeg":je,"../assets/images/img_4.jpeg":ke,"../assets/images/img_5.jpeg":Ce,"../assets/images/img_6.jpeg":Be,"../assets/images/img_7.jpeg":Re,"../assets/images/img_8.jpeg":Se,"../assets/images/img_9.jpeg":Te})[`../assets/images/${l}.jpeg`],self.location).href)(),"data-value":l,alt:"갤러리 이미지"})},b));return n?i(Ee,{children:[i(Ie,{children:[e(Le,{children:"이미지 팝업창"}),e(Ge,{ref:s,style:{left:a},onMouseDown:f,onMouseUp:w,onTouchStart:x,onTouchEnd:v,children:F}),i(Ue,{children:[e(Pe,{onClick:u,children:"이전"}),e(Fe,{onClick:m,children:"다음"})]}),e(De,{onClick:y,children:"팝업창 닫기"})]}),e(Me,{onClick:y})]}):e(P,{})},He=t.section`
+`,Oe=({isSlideShow:n,setIsSlideShow:d,currentSlideNum:c})=>{const o=r.useRef([]),s=r.useRef(null),[a,g]=r.useState(0),u=()=>{if(o.current[0]&&s.current){const l=o.current[0].getBoundingClientRect().width,b=s.current.getBoundingClientRect().width;if(a===0){const j=b*-1+l;g(j)}else{const j=a+l;g(j)}}},m=()=>{if(o.current[0]&&s.current){const l=o.current[0].getBoundingClientRect().width;if(s.current.getBoundingClientRect().width<=Math.abs(a)+l)g(0);else{const j=a-l;g(j)}}};r.useEffect(()=>{if(n&&o.current[0]){const l=o.current[0].getBoundingClientRect().width,b=c===1?0:l*(c-1)*-1;g(b)}},[n]);let h=0,_=0;const x=l=>{h=l.pageX},A=(l,b)=>{l!=b&&(l<b?u():m())},w=l=>{_=l.pageX,A(h,_)};let p=!1;const f=l=>{if(l.touches.length>1){p=!0,l.isPropagationStopped();return}p=!1,h=l.touches[0].pageX},v=l=>{p||(_=l.changedTouches[0].pageX,A(h,_))},y=()=>d(!1),F=$e.map((l,b)=>e(ze,{children:e("img",{ref:O=>o.current[b]=O,src:(()=>new URL(Object.assign({"../assets/images/img_1.jpeg":xe,"../assets/images/img_10.jpeg":fe,"../assets/images/img_11.jpeg":be,"../assets/images/img_12.jpeg":_e,"../assets/images/img_13.jpeg":we,"../assets/images/img_14.jpeg":ve,"../assets/images/img_2.jpeg":ye,"../assets/images/img_3.jpeg":je,"../assets/images/img_4.jpeg":ke,"../assets/images/img_5.jpeg":Ce,"../assets/images/img_6.jpeg":Be,"../assets/images/img_7.jpeg":Re,"../assets/images/img_8.jpeg":Se,"../assets/images/img_9.jpeg":Te})[`../assets/images/${l}.jpeg`],self.location).href)(),"data-value":l,alt:"갤러리 이미지"})},b));return n?i(Ee,{children:[i(Ie,{children:[e(Le,{children:"이미지 팝업창"}),e(Ge,{ref:s,style:{left:a},onMouseDown:x,onMouseUp:w,onTouchStart:f,onTouchEnd:v,children:F}),i(Ue,{children:[e(Pe,{onClick:u,children:"이전"}),e(Fe,{onClick:m,children:"다음"})]}),e(De,{onClick:y,children:"팝업창 닫기"})]}),e(Me,{onClick:y})]}):e(P,{})},He=t.section`
     padding: 36px 0;
 
     margin: 10px;
-    box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 0 1px rgba(32, 71, 84, 0.03), 0px 0px 0 3px rgba(32, 71, 84, 0.02);;
     border-radius: 14px;
     background-color:#fff;
 `,Ne=t.figure`
@@ -299,12 +299,12 @@ import{j as E,s as t,r,a as I,R as H,l as N,c as W,b as K,B as X,d as q,e as J}f
     font-weight: bold;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     background: #000;
-`,qe=["img_1","img_2","img_3","img_4"],Je=["img_1","img_2","img_3","img_4","img_5","img_6","img_7","img_8","img_9","img_10","img_11","img_12","img_13","img_14"],Qe=()=>{const n=r.useRef([]),[d,c]=r.useState(qe),[o,s]=r.useState(!1),[a,g]=r.useState(0);r.useEffect(()=>{document.documentElement.style.overflow=o?"hidden":"auto"},[o]);const u=()=>{n&&n.current&&n.current.length!==0&&n.current.map(f=>{const A=f,w=A.naturalWidth;A.naturalHeight>w&&A.setAttribute("class","is-height-long")})};r.useEffect(()=>{document.readyState==="complete"?u():window.addEventListener("load",u)},[]);const m=f=>{c(Je),f.target.remove()},h=f=>{const A=f.target.getAttribute("data-value");s(!0);const w=Number(A.split("img_")[1]);g(w)},_=d.map((f,A)=>e(Ne,{children:e("img",{ref:p=>n.current[A]=p,src:(()=>new URL(Object.assign({"../assets/images/thumbnail/img_1.jpeg":ie,"../assets/images/thumbnail/img_10.jpeg":oe,"../assets/images/thumbnail/img_11.jpeg":se,"../assets/images/thumbnail/img_12.jpeg":ae,"../assets/images/thumbnail/img_13.jpeg":re,"../assets/images/thumbnail/img_14.jpeg":de,"../assets/images/thumbnail/img_2.jpeg":ce,"../assets/images/thumbnail/img_3.jpeg":le,"../assets/images/thumbnail/img_4.jpeg":ge,"../assets/images/thumbnail/img_5.jpeg":pe,"../assets/images/thumbnail/img_6.jpeg":me,"../assets/images/thumbnail/img_7.jpeg":he,"../assets/images/thumbnail/img_8.jpeg":Ae,"../assets/images/thumbnail/img_9.jpeg":ue})[`../assets/images/thumbnail/${f}.jpeg`],self.location).href)(),"data-value":f,onClick:h,alt:"갤러리 이미지"})},A));return i(He,{"data-scroll":!0,children:[e(Ke,{children:"갤러리"}),e(We,{children:_}),e(Xe,{onClick:m,children:"갤러리 더보기"}),e(Oe,{isSlideShow:o,setIsSlideShow:s,currentSlideNum:a})]})},Ve=async n=>await I({url:"/api/create/guestbook",baseURL:"http://127.0.0.1:8000",method:"post",headers:{"content-Type":"application/json"},maxRedirects:2,data:{...n}}),Ye=async()=>await I({url:"/api/read/guestbook",baseURL:"http://127.0.0.1:8000",method:"get",headers:{"content-Type":"application/json"},maxRedirects:2}),Ze=async n=>await I({url:"/api/delete/guestbook",baseURL:"http://127.0.0.1:8000",method:"post",headers:{"content-Type":"application/json"},maxRedirects:2,data:{id:n}}),et={id:1,name:"홍길동",content:"신랑, 신부에게 축하의 메세지를 남겨주세요 :)",password:""},G={name:"",content:"",password:""},tt=()=>{const[n,d]=r.useState([et]),[c,o]=r.useState(G),[s,a]=r.useState(!1),[g,u]=r.useState(!1),m=r.useRef(null);r.useRef(null),r.useRef(null);const h=()=>{Ye().then(p=>d(p.data.data))},_=p=>{const x=prompt("내용을 삭제하시려면, 비밀번호를 입력해주세요."),v=n.filter(y=>y.id===p);x===v[0].password?(Ze(p),h()):x&&alert("비밀번호가 맞지 않습니다 :(")};r.useEffect(()=>{h(),console.log("guestBooks => ",n)},[]),r.useEffect(()=>{const{name:p,content:x,password:v}=c;u(!!(p&&x&&v))},[c]);const f=p=>{const x=p.target,v=x.value,y=x.name;o({...c,[y]:v})},A=()=>{o(G),a(!1),m.current&&m.current.focus(),h()};return{handleSubmit:async p=>{p.preventDefault(),a(!0),g&&Ve(c).then(x=>{x.data.result&&(console.log("정상적으로 입력이 완료되었습니다."),A())})},handleChange:f,isSubmitEnter:s,inputDatas:c,guestBooks:n,nameRef:m,onClickDeleteBtn:_}},nt=t.section`
+`,qe=["img_1","img_2","img_3","img_4"],Je=["img_1","img_2","img_3","img_4","img_5","img_6","img_7","img_8","img_9","img_10","img_11","img_12","img_13","img_14"],Qe=()=>{const n=r.useRef([]),[d,c]=r.useState(qe),[o,s]=r.useState(!1),[a,g]=r.useState(0);r.useEffect(()=>{document.documentElement.style.overflow=o?"hidden":"auto"},[o]);const u=()=>{n&&n.current&&n.current.length!==0&&n.current.map(x=>{const A=x,w=A.naturalWidth;A.naturalHeight>w&&A.setAttribute("class","is-height-long")})};r.useEffect(()=>{document.readyState==="complete"?u():window.addEventListener("load",u)},[]);const m=x=>{c(Je),x.target.remove()},h=x=>{const A=x.target.getAttribute("data-value");s(!0);const w=Number(A.split("img_")[1]);g(w)},_=d.map((x,A)=>e(Ne,{children:e("img",{ref:p=>n.current[A]=p,src:(()=>new URL(Object.assign({"../assets/images/thumbnail/img_1.jpeg":ie,"../assets/images/thumbnail/img_10.jpeg":oe,"../assets/images/thumbnail/img_11.jpeg":se,"../assets/images/thumbnail/img_12.jpeg":ae,"../assets/images/thumbnail/img_13.jpeg":re,"../assets/images/thumbnail/img_14.jpeg":de,"../assets/images/thumbnail/img_2.jpeg":ce,"../assets/images/thumbnail/img_3.jpeg":le,"../assets/images/thumbnail/img_4.jpeg":ge,"../assets/images/thumbnail/img_5.jpeg":pe,"../assets/images/thumbnail/img_6.jpeg":me,"../assets/images/thumbnail/img_7.jpeg":he,"../assets/images/thumbnail/img_8.jpeg":Ae,"../assets/images/thumbnail/img_9.jpeg":ue})[`../assets/images/thumbnail/${x}.jpeg`],self.location).href)(),"data-value":x,onClick:h,alt:"갤러리 이미지"})},A));return i(He,{"data-scroll":!0,children:[e(Ke,{children:"갤러리"}),e(We,{children:_}),e(Xe,{onClick:m,children:"갤러리 더보기"}),e(Oe,{isSlideShow:o,setIsSlideShow:s,currentSlideNum:a})]})},Ve=async n=>await I({url:"/api/create/guestbook",baseURL:"http://127.0.0.1:8000",method:"post",headers:{"content-Type":"application/json"},maxRedirects:2,data:{...n}}),Ye=async()=>await I({url:"/api/read/guestbook",baseURL:"http://127.0.0.1:8000",method:"get",headers:{"content-Type":"application/json"},maxRedirects:2}),Ze=async n=>await I({url:"/api/delete/guestbook",baseURL:"http://127.0.0.1:8000",method:"post",headers:{"content-Type":"application/json"},maxRedirects:2,data:{id:n}}),et={id:1,name:"홍길동",content:"신랑, 신부에게 축하의 메세지를 남겨주세요 :)",password:""},G={name:"",content:"",password:""},tt=()=>{const[n,d]=r.useState([et]),[c,o]=r.useState(G),[s,a]=r.useState(!1),[g,u]=r.useState(!1),m=r.useRef(null);r.useRef(null),r.useRef(null);const h=()=>{Ye().then(p=>d(p.data.data))},_=p=>{const f=prompt("내용을 삭제하시려면, 비밀번호를 입력해주세요."),v=n.filter(y=>y.id===p);f===v[0].password?(Ze(p),h()):f&&alert("비밀번호가 맞지 않습니다 :(")};r.useEffect(()=>{h(),console.log("guestBooks => ",n)},[]),r.useEffect(()=>{const{name:p,content:f,password:v}=c;u(!!(p&&f&&v))},[c]);const x=p=>{const f=p.target,v=f.value,y=f.name;o({...c,[y]:v})},A=()=>{o(G),a(!1),m.current&&m.current.focus(),h()};return{handleSubmit:async p=>{p.preventDefault(),a(!0),g&&Ve(c).then(f=>{f.data.result&&(console.log("정상적으로 입력이 완료되었습니다."),A())})},handleChange:x,isSubmitEnter:s,inputDatas:c,guestBooks:n,nameRef:m,onClickDeleteBtn:_}},nt=t.section`
     padding: 36px 16px;
     font-size: 16px;
 
     margin: 10px;
-    box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 0 1px rgba(32, 71, 84, 0.03), 0px 0px 0 3px rgba(32, 71, 84, 0.02);;
     border-radius: 14px;
     background-color:#fff;
 `,it=t.div`
@@ -321,6 +321,7 @@ import{j as E,s as t,r,a as I,R as H,l as N,c as W,b as K,B as X,d as q,e as J}f
     padding: 8px;
     font-size: 16px;
     border-bottom: 1px solid #000;
+    border-radius: 0px;
     box-sizing: border-box;
 `,st=t.textarea`
     width: 100%;
@@ -329,12 +330,14 @@ import{j as E,s as t,r,a as I,R as H,l as N,c as W,b as K,B as X,d as q,e as J}f
     font-size: 16px;
     border: 0;
     border-bottom: 1px solid #000;
+    border-radius: 0px;
     box-sizing: border-box;
 `,at=t.input`
     width: 100%;
     padding: 8px;
     font-size: 16px;
     border-bottom: 1px solid #000;
+    border-radius: 0px;
     box-sizing: border-box;
 `,rt=t.div`
     display: grid;
@@ -406,7 +409,7 @@ import{j as E,s as t,r,a as I,R as H,l as N,c as W,b as K,B as X,d as q,e as J}f
     color: #5e5e5e;
 
     margin: 10px;
-    box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 0 1px rgba(32, 71, 84, 0.03), 0px 0px 0 3px rgba(32, 71, 84, 0.02);;
     border-radius: 14px;
     background-color:#fff;
 `,At=t.p`
@@ -417,11 +420,11 @@ import{j as E,s as t,r,a as I,R as H,l as N,c as W,b as K,B as X,d as q,e as J}f
     display:flex;
     flex-direction: column;
     color: #252525;
-`,ft=t.p`
+`,xt=t.p`
     display: flex;
     align-items: center;
     margin-left: 12px;
-`,xt=t.em`
+`,ft=t.em`
     font-style: initial;
     margin-left: 8px;
     color: #252525;
@@ -434,14 +437,25 @@ import{j as E,s as t,r,a as I,R as H,l as N,c as W,b as K,B as X,d as q,e as J}f
 `,S=t.em`
     font-style: initial;
     font-weight: bold;
-    color: #252525;
+    color: #000;
+
+
+    // @keyframes color {
+    //     0% { color: #567792; }
+    //     50% { color: #1997ff; }
+    //     100% { color: #89c7fa; }
+    // };
+    // // animation: color 1s ease-in-out;
+    // animation: color 3s ease-in-out infinite;
+    // animation-direction: alternate;
 `,_t=t.h2`
     position: absolute;
     left: -9999px;
     top: -9999px;
-`,wt=()=>i(ht,{"data-scroll":!0,children:[e(_t,{children:"소개글"}),i(At,{children:[e(S,{children:"우"}),"리 결혼합니다.",e("br",{}),e(S,{children:"준"}),"비된 자세로 배우며 살아가겠습니다.",e("br",{}),e("br",{}),e(S,{children:"소"}),"중한 사람과",e("br",{}),e(S,{children:"희"}),"로애락을 함께 하겠습니다."]}),[{name:"김우준",mother:"백숙현",father:"김동필",rank:"차남"},{name:"김소희",mother:"김나현",father:"김상현",rank:"장녀"}].map((d,c)=>i(bt,{children:[i(ut,{children:[e("li",{children:d.father}),e("li",{children:d.mother})]}),i(ft,{children:["의 ",d.rank," ",e(xt,{children:d.name})]})]},c))]}),vt="/wedding-card/assets/bg-c7833e65.jpg",yt=t.section`
+`,wt=()=>i(ht,{"data-scroll":!0,children:[e(_t,{children:"소개글"}),i(At,{children:[e(S,{children:"우"}),"리 결혼합니다.",e("br",{}),e(S,{children:"준"}),"비된 자세로 배우며 살아가겠습니다.",e("br",{}),e("br",{}),e(S,{children:"소"}),"중한 사람과",e("br",{}),e(S,{children:"희"}),"로애락을 함께 하겠습니다."]}),[{name:"김우준",mother:"백숙현",father:"김동필",rank:"차남"},{name:"김소희",mother:"김나현",father:"김상현",rank:"장녀"}].map((d,c)=>i(bt,{children:[i(ut,{children:[e("li",{children:d.father}),e("li",{children:d.mother})]}),i(xt,{children:["의 ",d.rank," ",e(ft,{children:d.name})]})]},c))]}),vt="/wedding-card/assets/bg-c7833e65.jpg",yt=t.section`
+    overflow: hidden;
     position: relative;
-    min-height: calc(640px - 20px);
+    min-height: calc(100vh - 20px);
     align-items: center;
     justify-content: center;
     display: flex;
@@ -449,32 +463,37 @@ import{j as E,s as t,r,a as I,R as H,l as N,c as W,b as K,B as X,d as q,e as J}f
     background: url(${vt}) no-repeat center/cover;
 
     margin: 10px;
-    box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 0 1px rgba(32, 71, 84, 0.03), 0px 0px 0 3px rgba(32, 71, 84, 0.02);;
     border-radius: 14px;
+
+    @media(min-height: 640px) {
+        min-height: calc(640px - 20px);
+    }
 `,jt=t.strong`
-    z-index: 2;
+    z-index: 5;
     font-size: 20px;
 `,kt=t.span`
     margin: 0 5px;
     font-size: 14px;
     font-weight: normal;
 `,Ct=t.p`
-    z-index: 2;
+    z-index: 5;
     margin: 16px auto;
 `,Bt=t.p`
-    z-index: 1;
-    font-style: italic;
-    font-size: 50px;
-    font-weight: bold;
+    z-index: 2;
     position: absolute;
     right: 30px;
     bottom: 30px;
-    color: #fff;
+    padding-right: 6px;
+    font-style: italic;
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff3ec;
 `,Rt=t.h2`
     position: absolute;
     left: -9999px;
     top: -9999px;
-`,St=()=>{const n=r.useRef([]);r.useEffect(()=>{n.current&&n.current.map(o=>{new H(o,{speed:-2,center:!1,round:!0,vertical:!0,horizontal:!1})})},[]);const d={bridegroom:"김우준",bride:"김소희",place:"분당앤스퀘어 4층 컨벤션홀",date:"2023-06-10 12:00"},c=()=>{const o=new Date(d.date),s=new Date,a=o.getTime()-s.getTime(),g=Math.floor(a/(1e3*60*60*24)),u=o.getHours()<12?"오전":"오후",m=o.getMinutes()?`${o.getMinutes()}분`:"",h=`${u} ${o.getHours()}시 ${m}`;return{weddingDay:`${o.getFullYear()}년 ${o.getMonth()+1}월 ${o.getDate()}일 ${h}`,dday:g}};return i(yt,{children:[e(Rt,{children:"메인페이지"}),i(jt,{ref:o=>n.current[0]=o,"data-rellax-speed":"-3",children:["우준",e(kt,{children:"and"}),"소희"]}),i(Ct,{ref:o=>n.current[1]=o,"data-rellax-speed":"-3",children:[c().weddingDay,e("br",{}),d.place]}),i(Bt,{ref:o=>n.current[2]=o,"data-rellax-speed":"4",children:["D - ",c().dday]})]})},Tt=t.div`
+`,St=()=>{const n=r.useRef([]);r.useEffect(()=>{n.current&&n.current.map(o=>{new H(o,{speed:-2,center:!1,round:!0,vertical:!0,horizontal:!1})})},[]);const d={bridegroom:"김우준",bride:"김소희",place:"분당앤스퀘어 4층 컨벤션홀",date:"2023-06-10 12:00"},c=()=>{const o=new Date(d.date),s=new Date,a=o.getTime()-s.getTime(),g=Math.floor(a/(1e3*60*60*24)),u=o.getHours()<12?"오전":"오후",m=o.getMinutes()?`${o.getMinutes()}분`:"",h=`${u} ${o.getHours()}시 ${m}`;return{weddingDay:`${o.getFullYear()}년 ${o.getMonth()+1}월 ${o.getDate()}일 ${h}`,dday:g}};return i(yt,{children:[e(Rt,{children:"메인페이지"}),i(jt,{ref:o=>n.current[0]=o,"data-rellax-speed":"-3",children:["우준",e(kt,{children:"and"}),"소희"]}),i(Ct,{ref:o=>n.current[1]=o,"data-rellax-speed":"-3",children:[c().weddingDay,e("br",{}),d.place]}),i(Bt,{ref:o=>n.current[2]=o,"data-rellax-speed":"1",children:["D-",c().dday]})]})},Tt=t.div`
     padding: 16px;
 `,$t=t.a`
     display: block;
@@ -488,7 +507,7 @@ import{j as E,s as t,r,a as I,R as H,l as N,c as W,b as K,B as X,d as q,e as J}f
     padding: 36px 0;
 
     margin: 10px;
-    box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 0 1px rgba(32, 71, 84, 0.03), 0px 0px 0 3px rgba(32, 71, 84, 0.02);;
     border-radius: 14px;
     background-color:#fff;
 `,Lt=t.h2`
