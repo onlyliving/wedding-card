@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React, { useEffect, useState, useRef, MouseEventHandler } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 const imageList = [
     "img_1",

@@ -8,7 +8,7 @@ const Content = styled.section`
     font-size: 16px;
 
     margin: 10px;
-    box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 0 1px rgba(32, 71, 84, 0.03), 0px 0px 0 3px rgba(32, 71, 84, 0.02);;
     border-radius: 14px;
     background-color:#fff;
 `;
@@ -29,6 +29,7 @@ const InputName = styled.input`
     padding: 8px;
     font-size: 16px;
     border-bottom: 1px solid #000;
+    border-radius: 0px;
     box-sizing: border-box;
 `;
 
@@ -39,6 +40,7 @@ const Textarea = styled.textarea`
     font-size: 16px;
     border: 0;
     border-bottom: 1px solid #000;
+    border-radius: 0px;
     box-sizing: border-box;
 `;
 
@@ -47,6 +49,7 @@ const InputPw = styled.input`
     padding: 8px;
     font-size: 16px;
     border-bottom: 1px solid #000;
+    border-radius: 0px;
     box-sizing: border-box;
 `;
 

@@ -8,7 +8,7 @@ const Content = styled.section`
     color: #5e5e5e;
 
     margin: 10px;
-    box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 0 1px rgba(32, 71, 84, 0.03), 0px 0px 0 3px rgba(32, 71, 84, 0.02);;
     border-radius: 14px;
     background-color:#fff;
 `;
@@ -48,7 +48,17 @@ const FlexBox = styled.div`
 const PointText = styled.em`
     font-style: initial;
     font-weight: bold;
-    color: #252525;
+    color: #000;
+
+
+    // @keyframes color {
+    //     0% { color: #567792; }
+    //     50% { color: #1997ff; }
+    //     100% { color: #89c7fa; }
+    // };
+    // // animation: color 1s ease-in-out;
+    // animation: color 3s ease-in-out infinite;
+    // animation-direction: alternate;
 `;
 
 const HideTitle = styled.h2`

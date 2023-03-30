@@ -1,5 +1,4 @@
 import ScrollOut from "scroll-out";
-// import Splitting from "splitting";
 import { useEffect } from "react";
 
 import ContactSection from "./components/ContactSection";
@@ -12,11 +11,9 @@ import MapSection from "./components/MapSection";
 export default () => {
 
     useEffect(() => {
-        // Splitting();
         ScrollOut({
             threshold: .2,
             once: true
-            // targets: '[data-splitting]'
         });
     }, []);
 

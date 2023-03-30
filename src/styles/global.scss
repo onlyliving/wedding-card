@@ -4,6 +4,7 @@ input,
 select,
 textarea {
     font-family: "Noto Serif KR", serif;
+    // font-family: "MaruBuri", serif;
     // font-family: "Apple SD Gothic Neo", sans-serif;
     -webkit-font-smoothing: antialiased;
 }
@@ -54,15 +55,6 @@ textarea:focus {
     outline: 0;
 }
 
-// input[type="checkbox"],
-// input[type="date"] {
-//     -webkit-appearance: none;
-//     -moz-appearance: none;
-//     appearance: none;
-//     position: absolute;
-//     opacity: 0;
-// }
-
 input:focus,
 textarea:focus {
     outline: 1px solid red;
@@ -88,7 +80,7 @@ body {
     margin: auto;
     cursor: default;
     -webkit-overflow-scrolling: touch;
-    background-color: #f5e9e2;
+    background-color: #ebe7e4;
 }
 
 button {
@@ -120,23 +112,14 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 [data-scroll] {
     opacity: 0;
-    // will-change: transform, scale, opacity
-    // transform: translateY(6rem) scale(0.93);
+    will-change: transform, scale, opacity;
     transition: all 1.5s $zease;
 }
 
-// [data-scroll] {
-//     transition: transform 0.3s cubic-bezier(0.3, 0, 0.3, 1), opacity 0.3s linear;
-//     transition-delay: calc(20ms * var(--char-index));
-//     // transition: opacity 1s;
-// }
-
 [data-scroll="in"] {
     opacity: 1;
-    // transform: translateY(0) scale(1);
 }
 
 [data-scroll="out"] {
     opacity: 0;
-    // transform: translateY(30px);
 }

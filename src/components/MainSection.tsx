@@ -5,8 +5,9 @@ import bgImg from "../assets/images/bg.jpg";
 import { useEffect, useRef } from "react";
 
 const Content = styled.section`
+    overflow: hidden;
     position: relative;
-    min-height: calc(640px - 20px);
+    min-height: calc(100vh - 20px);
     align-items: center;
     justify-content: center;
     display: flex;
@@ -14,12 +15,16 @@ const Content = styled.section`
     background: url(${bgImg}) no-repeat center/cover;
 
     margin: 10px;
-    box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 0 1px rgba(32, 71, 84, 0.03), 0px 0px 0 3px rgba(32, 71, 84, 0.02);;
     border-radius: 14px;
+
+    @media(min-height: 640px) {
+        min-height: calc(640px - 20px);
+    }
 `;
 
 const Strong = styled.strong`
-    z-index: 2;
+    z-index: 5;
     font-size: 20px;
 `;
 
@@ -30,19 +35,20 @@ const SubText = styled.span`
 `;
 
 const Info = styled.p`
-    z-index: 2;
+    z-index: 5;
     margin: 16px auto;
 `;
 
 const Dday = styled.p`
-    z-index: 1;
-    font-style: italic;
-    font-size: 50px;
-    font-weight: bold;
+    z-index: 2;
     position: absolute;
     right: 30px;
     bottom: 30px;
-    color: #fff;
+    padding-right: 6px;
+    font-style: italic;
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff3ec;
 `;
 
 const HideTitle = styled.h2`
@@ -51,10 +57,9 @@ const HideTitle = styled.h2`
     top: -9999px;
 `;
 
-
 export default () => {
 
-    const rellaxRef = useRef<HTMLElement[] | null[]>([]);
+    const rellaxRef = useRef<HTMLElement[] | SVGSVGElement[] | null[]>([]);
 
     useEffect(() => {
         if (rellaxRef.current) {
@@ -114,8 +119,9 @@ export default () => {
             </Info>
             <Dday
                 ref={el => rellaxRef.current[2] = el}
-                data-rellax-speed="4"
-            >D - {getDDay().dday}</Dday>
+                data-rellax-speed="1"
+            >D-{getDDay().dday}</Dday>
+
         </Content>
     )
 }

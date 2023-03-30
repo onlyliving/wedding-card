@@ -13,7 +13,7 @@ const Content = styled.section`
     text-align: center;
     
     margin: 10px;
-    box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 0 1px rgba(32, 71, 84, 0.03), 0px 0px 0 3px rgba(32, 71, 84, 0.02);;
     border-radius: 14px;
     background-color:#fff;
 `;
