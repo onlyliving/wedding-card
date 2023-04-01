@@ -15,7 +15,7 @@ interface responseProps {
 export const getGuestBook = async (): Promise<AxiosResponse<any, responseProps>> => {
     const response = await axios({
         url: "/api/read/guestbook",
-        baseURL: "http://127.0.0.1:8000",
+        baseURL: window.location.hostname === "localhost" ? "http://127.0.0.1:8000" : "http://35.216.39.89",
         method: "get",
         headers: {
             "content-Type": "application/json",

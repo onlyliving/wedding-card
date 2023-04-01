@@ -33,8 +33,8 @@ $ uvicorn main:app --reload
     - --port : 접속 원하는 포트를 지정
 
     - API 문서
-        -   [Swagger UI] http: 127.0.0.1:8000/docs
-        -   [ReDoc] http: 127.0.0.1:8000/redoc
+        -   [Swagger UI] http://35.216.39.89/docs
+        -   [ReDoc] http://35.216.39.89/redoc
 
 3. 웹 서버 실행
 

@@ -5,7 +5,7 @@ import { GuestBookProps, GuestBookApiReturns } from "./index";
 export const postGuestBook = async (requestData: GuestBookProps) => {
     const response = await axios({
         url: "/api/create/guestbook",
-        baseURL: "http://127.0.0.1:8000",
+        baseURL: window.location.hostname === "localhost" ? "http://127.0.0.1:8000" : "http://35.216.39.89",
         method: "post",
         headers: {
             "content-Type": "application/json",
