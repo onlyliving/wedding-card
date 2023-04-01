@@ -112,7 +112,6 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 [data-scroll] {
     opacity: 0;
-    will-change: transform, scale, opacity;
     transition: all 1.5s $zease;
 }
 
