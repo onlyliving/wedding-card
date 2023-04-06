@@ -7,6 +7,7 @@ import GuestBook from "./components/GuestBook";
 import IntroSection from "./components/IntroSection";
 import MainSection from "./components/MainSection";
 import MapSection from "./components/MapSection";
+import AccountSection from "./components/AccountSection";
 
 export default () => {
 
@@ -24,6 +25,7 @@ export default () => {
             <ContactSection />
             <GallerySection />
             <MapSection />
+            <AccountSection />
             <GuestBook />
         </div>
     )

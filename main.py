@@ -1,9 +1,14 @@
 #-*-coding:utf-8-*-
 from typing import Union
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request, status
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import json
+from starlette.exceptions import HTTPException as StarletteHTTPException
+from fastapi.exceptions import RequestValidationError
+from fastapi.responses import JSONResponse
+from fastapi.encoders import jsonable_encoder
+
 
 file_path = "./guestBook.json"
 
@@ -13,7 +18,8 @@ origins = [
     "http://localhost:5173",
     "http://192.168.10.131:3000",
     "http://localhost:8000",
-    "https://greensohee.com"
+    "https://greensohee.com",
+    "https://34.160.147.78"
 ]
 
 app.add_middleware(
@@ -33,6 +39,13 @@ class Guestbook(BaseModel):
 class DeleteGuestBook(BaseModel):
     id: int
 
+
+@app.exception_handler(RequestValidationError)
+async def validation_exception_handler(request: Request, exc: RequestValidationError):
+    return JSONResponse(
+        status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+        content=jsonable_encoder({"detail": exc.errors(), "body": exc.body}),
+    )
 
 
 @app.get("/api/read/guestbook")

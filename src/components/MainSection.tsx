@@ -89,7 +89,7 @@ export default () => {
         const goalDay = new Date(data["date"]);
         const today = new Date();
         const diff: number = goalDay.getTime() - today.getTime();
-        const diffDay = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const diffDay = Math.round(diff / (1000 * 60 * 60 * 24));
 
         const setAmPm = goalDay.getHours() < 12 ? "오전" : "오후";
         const setMinutes = goalDay.getMinutes() ? `${goalDay.getMinutes()}분` : "";
