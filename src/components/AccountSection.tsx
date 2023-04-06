@@ -119,7 +119,7 @@ export default () => {
                             data-value="김소희,신부,신한 110214034940"
                             onClick={handleBtnClick}
                         >
-                            계좌
+                            계 좌
                         </Button>
                     </li>
                     <li>
