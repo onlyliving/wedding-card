@@ -21,7 +21,7 @@ const mapOptions = {
     center: new naver.maps.LatLng(37.34, 127.1067), // x, y 값 설정 
     scaleControl: false, // 우측 하단 scale 표시
     mapDataControl: false, // 좌측 하단 @ NAVER Corp 표시
-    zoom: 18, // 지도 줌 레벨
+    zoom: 16, // 지도 줌 레벨
     draggable: false,
     // pinchZoom: false,
     scrollWheel: false,

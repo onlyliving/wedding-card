@@ -19,7 +19,8 @@ origins = [
     "http://192.168.10.131:3000",
     "http://localhost:8000",
     "https://greensohee.com",
-    "https://34.160.147.78"
+    "https://34.160.147.78",
+    "https://onlyliving.github.io"
 ]
 
 app.add_middleware(

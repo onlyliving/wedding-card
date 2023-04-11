@@ -152,7 +152,7 @@ export default () => {
     const observeTarget = useRef(null);
 
     return (
-        <Content data-scroll ref={observeTarget} style={{ display: "none" }}>
+        <Content data-scroll ref={observeTarget}>
             <Title >게스트 북</Title>
             <FixedInputBox>
                 <form onSubmit={handleSubmit}>
