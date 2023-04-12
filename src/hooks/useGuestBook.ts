@@ -25,17 +25,14 @@ export const useGuestBook = () => {
     const [isPass, setIsPass] = useState(false);
 
     const nameRef = useRef(null);
-    const contentRef = useRef(null);
-    const passwordRef = useRef(null);
 
-    const loadGuestBook = () => {
-        getGuestBook().then((res) => setGuestBooks(res.data.data));
-    };
-    ``;
+    const loadGuestBook = () => getGuestBook().then((res) => setGuestBooks(res.data.data));
+
     const onClickDeleteBtn = (id: number) => {
         const inputPassword = prompt("내용을 삭제하시려면, 비밀번호를 입력해주세요.");
         const targetData = guestBooks.filter((item) => item.id === id);
         if (inputPassword === targetData[0].password) {
+            alert("내용이 삭제되었습니다.");
             deleteGuestBook(id);
             loadGuestBook();
         } else if (inputPassword) {
@@ -89,7 +86,7 @@ export const useGuestBook = () => {
         if (isPass) {
             postGuestBook(inputDatas).then((res) => {
                 if (res.data.result) {
-                    console.log("정상적으로 입력이 완료되었습니다.");
+                    alert("정상적으로 입력이 완료되었습니다.");
                     updateGuestBook();
                 }
             });
