@@ -79,7 +79,6 @@ const BoxWrap = styled.ul`
             border-bottom: 0;
         }
     }
-
 `;
 
 const HideInput = styled.input`
@@ -117,13 +116,9 @@ export default ({
         setAccount(getAccount);
 
         if (getAccount) {
-            const onlyNumber = getAccount.split(" ")[1];
-            setAccountOnlyNumStr(onlyNumber);
+            setAccountOnlyNumStr(getAccount);
         }
-
     }, [data])
-
-
 
     const handleCopy = () => {
         if (inputRef && inputRef.current) {
@@ -134,10 +129,7 @@ export default ({
         }
     };
 
-    const handleClose = () => {
-        setIsShow(false);
-    };
-
+    const handleClose = () => setIsShow(false);
 
     return (
         !isShow ? <></> :
