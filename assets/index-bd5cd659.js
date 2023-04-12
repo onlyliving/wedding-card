@@ -1,4 +1,4 @@
-import{j as M,s as t,r,a as L,R as H,l as V,c as K,b as X,B as q,d as J,e as Q}from"./vendor-9f7ec7a0.js";(function(){const d=document.createElement("link").relList;if(d&&d.supports&&d.supports("modulepreload"))return;for(const s of document.querySelectorAll('link[rel="modulepreload"]'))o(s);new MutationObserver(s=>{for(const a of s)if(a.type==="childList")for(const l of a.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&o(l)}).observe(document,{childList:!0,subtree:!0});function c(s){const a={};return s.integrity&&(a.integrity=s.integrity),s.referrerpolicy&&(a.referrerPolicy=s.referrerpolicy),s.crossorigin==="use-credentials"?a.credentials="include":s.crossorigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function o(s){if(s.ep)return;s.ep=!0;const a=c(s);fetch(s.href,a)}})();const D=M.Fragment,e=M.jsx,n=M.jsxs,Y="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAhFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8qm6wAAAAK3RSTlMAHPMM31v644VxPSD27ebUx5d6TxIEy8Kpn46LgmtlU0sx17y4bF9VQzAmz+I01AAAANdJREFUOMuF0tkWgiAQgGGU3HPfNTPba97//TIDkiOj/y3fOY4DZCy1QoOsZMOYg587AKuC+vArQUAHvIMa1LAhSvjnqoA1A8qfDUAUUhW4ivNAI6pafq6/iDKDgx7ZQ6YzYBOkhoH9GwGayUSUIyKGjdvI+K7MEyJc4GM8EWEL4apBXoptcUEfw1zQAngxnX4tBLhJg56FsMZRh+kKO2kbOxBVBtvucS48JqS2xX1TpNIc0RJE8j6aBdgRuV5HPiHSYnb7+CvyakH0BHlCRnvx/aJyvlv/ACJvPLhlFwb/AAAAAElFTkSuQmCC",Z="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAATlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADEoqZZAAAAGXRSTlMA84i/BJPc0Y1oqPZaVLOFDul9GBYUwKEZd6XD1AAAAKVJREFUOMu9ktsOwiAQBXcLFFqg0JvK//+oK0raGNgYY5yHE5KZB0iAj1iDtukNq7tb8Q5TFXRP71OTXGzYDnClICSGQIHmAk0BcgFSkFh+GuAw4DGVQAGoYyqBkFIkATT5VLlD35+m8J9nzpyfKZi4YGL/C+GBEG0v4MGmW17vkInG1rRVEQrRX16X6gqL2+GMyX6EJqZ4LhglH5BnA97DcoUvuQNmiz7DqYeF5QAAAABJRU5ErkJggg==",ee=t.section`
+import{j as E,s as t,r,a as M,R as H,l as V,c as K,b as X,B as q,d as J,e as Q}from"./vendor-9f7ec7a0.js";(function(){const d=document.createElement("link").relList;if(d&&d.supports&&d.supports("modulepreload"))return;for(const s of document.querySelectorAll('link[rel="modulepreload"]'))o(s);new MutationObserver(s=>{for(const a of s)if(a.type==="childList")for(const l of a.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&o(l)}).observe(document,{childList:!0,subtree:!0});function c(s){const a={};return s.integrity&&(a.integrity=s.integrity),s.referrerpolicy&&(a.referrerPolicy=s.referrerpolicy),s.crossorigin==="use-credentials"?a.credentials="include":s.crossorigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function o(s){if(s.ep)return;s.ep=!0;const a=c(s);fetch(s.href,a)}})();const L=E.Fragment,e=E.jsx,n=E.jsxs,Y="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAhFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8qm6wAAAAK3RSTlMAHPMM31v644VxPSD27ebUx5d6TxIEy8Kpn46LgmtlU0sx17y4bF9VQzAmz+I01AAAANdJREFUOMuF0tkWgiAQgGGU3HPfNTPba97//TIDkiOj/y3fOY4DZCy1QoOsZMOYg587AKuC+vArQUAHvIMa1LAhSvjnqoA1A8qfDUAUUhW4ivNAI6pafq6/iDKDgx7ZQ6YzYBOkhoH9GwGayUSUIyKGjdvI+K7MEyJc4GM8EWEL4apBXoptcUEfw1zQAngxnX4tBLhJg56FsMZRh+kKO2kbOxBVBtvucS48JqS2xX1TpNIc0RJE8j6aBdgRuV5HPiHSYnb7+CvyakH0BHlCRnvx/aJyvlv/ACJvPLhlFwb/AAAAAElFTkSuQmCC",Z="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAATlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADEoqZZAAAAGXRSTlMA84i/BJPc0Y1oqPZaVLOFDul9GBYUwKEZd6XD1AAAAKVJREFUOMu9ktsOwiAQBXcLFFqg0JvK//+oK0raGNgYY5yHE5KZB0iAj1iDtukNq7tb8Q5TFXRP71OTXGzYDnClICSGQIHmAk0BcgFSkFh+GuAw4DGVQAGoYyqBkFIkATT5VLlD35+m8J9nzpyfKZi4YGL/C+GBEG0v4MGmW17vkInG1rRVEQrRX16X6gqL2+GMyX6EJqZ4LhglH5BnA97DcoUvuQNmiz7DqYeF5QAAAABJRU5ErkJggg==",ee=t.section`
     // min-height: 640px;
     padding: 36px;
     align-items: center;
@@ -50,13 +50,13 @@ import{j as M,s as t,r,a as L,R as H,l as V,c as K,b as X,B as q,d as J,e as Q}f
 `,ne=t.div`
     width: 100%;
     margin: 36px auto 0;
-`,G=t.h3`
+`,D=t.h3`
     display: block;
     font-size: 14px;
     font-weight: normal;
 `,$=t.span`
     display: block;
-`,F=t.span`
+`,G=t.span`
     margin-right: 8px;
 `,ie=t.h2`
     font-size: 22px;
@@ -65,7 +65,7 @@ import{j as M,s as t,r,a as L,R as H,l as V,c as K,b as X,B as q,d as J,e as Q}f
 준비된 자세로 배우며 살아가겠습니다
 
 소중한 사람과
-희로애락을 함께 하겠습니다.`,contact:{bridegroom:{tel:"tel:010-5101-2659",sms:"sms:010-5101-2659",parents:{father:{name:"김동필",tel:"tel:010-4321-0987",sms:"sms:010-4321-0987"},mother:{name:"백숙현",tel:"tel:010-2287-9852",sms:"sms:010-2287-9852"}}},bride:{tel:"tel:010-8900-2019",sms:"sms:010-8900-2019",parents:{father:{name:"김상현",tel:"tel:010-5141-8109",sms:"sms:010-5141-8109"},mother:{name:"김나현",tel:"tel:010-2251-4026",sms:"sms:010-2251-4026"}}}}};return n(ee,{"data-scroll":!0,children:[e(ie,{children:"축하 연락처"}),n(ne,{children:[n("ul",{children:[n(B,{children:[e(F,{children:"신랑 김우준"}),e(C,{href:i.contact.bridegroom.tel}),e(j,{href:i.contact.bridegroom.sms})]}),n(B,{children:[e(F,{children:"신부 김소희"}),e(C,{href:i.contact.bride.tel}),e(j,{href:i.contact.bride.sms})]})]}),n(te,{children:[e("ul",{children:n("li",{children:[e(G,{children:"신랑측 혼주"}),n("ul",{children:[n(B,{children:[e($,{children:"혼주 김동필"}),e(C,{href:i.contact.bridegroom.parents.father.tel}),e(j,{href:i.contact.bridegroom.parents.father.sms})]}),n(B,{children:[e($,{children:"혼주 백숙현"}),e(C,{href:i.contact.bridegroom.parents.mother.tel}),e(j,{href:i.contact.bridegroom.parents.mother.sms})]})]})]})}),e("ul",{children:n("li",{children:[e(G,{children:"신부측 혼주"}),n("ul",{children:[n(B,{children:[e($,{children:"혼주 김상현"}),e(C,{href:i.contact.bride.parents.father.tel}),e(j,{href:i.contact.bride.parents.father.sms})]}),n(B,{children:[e($,{children:"혼주 김나현"}),e(C,{href:i.contact.bride.parents.mother.tel}),e(j,{href:i.contact.bride.parents.mother.sms})]})]})]})})]})]})]})},se="/wedding-card/assets/img_1-a4ac0188.jpeg",re="/wedding-card/assets/img_10-204ee8ad.jpeg",ae="/wedding-card/assets/img_11-31764165.jpeg",de="/wedding-card/assets/img_12-657798e6.jpeg",ce="/wedding-card/assets/img_13-98a2ac28.jpeg",le="/wedding-card/assets/img_14-a9168eb5.jpeg",pe="/wedding-card/assets/img_2-6f1d3554.jpeg",ge="/wedding-card/assets/img_3-18d9c9f5.jpeg",he="/wedding-card/assets/img_4-0b2a4ae3.jpeg",me="/wedding-card/assets/img_5-d161d436.jpeg",ue="/wedding-card/assets/img_6-3efe16b5.jpeg",xe="/wedding-card/assets/img_7-f218db53.jpeg",Ae="/wedding-card/assets/img_8-9fdc64f4.jpeg",fe="/wedding-card/assets/img_9-d0987053.jpeg",be="/wedding-card/assets/img_1-f2fd50ed.jpeg",_e="/wedding-card/assets/img_10-07ef3720.jpeg",we="/wedding-card/assets/img_11-23b737a3.jpeg",ve="/wedding-card/assets/img_12-bbd14a5b.jpeg",ye="/wedding-card/assets/img_13-00b68755.jpeg",ke="/wedding-card/assets/img_14-6f8687a2.jpeg",je="/wedding-card/assets/img_2-8701a851.jpeg",Ce="/wedding-card/assets/img_3-5d0c5887.jpeg",Be="/wedding-card/assets/img_4-096dadeb.jpeg",Se="/wedding-card/assets/img_5-2f5549e0.jpeg",$e="/wedding-card/assets/img_6-7d280603.jpeg",Re="/wedding-card/assets/img_7-f89f825a.jpeg",Te="/wedding-card/assets/img_8-78cd6d2c.jpeg",ze="/wedding-card/assets/img_9-df12a285.jpeg",Ie=["img_1","img_2","img_3","img_4","img_5","img_6","img_7","img_8","img_9","img_10","img_11","img_12","img_13","img_14"],Ee=t.figure`
+희로애락을 함께 하겠습니다.`,contact:{bridegroom:{tel:"tel:010-5101-2659",sms:"sms:010-5101-2659",parents:{father:{name:"김동필",tel:"tel:010-4321-0987",sms:"sms:010-4321-0987"},mother:{name:"백숙현",tel:"tel:010-2287-9852",sms:"sms:010-2287-9852"}}},bride:{tel:"tel:010-8900-2019",sms:"sms:010-8900-2019",parents:{father:{name:"김상현",tel:"tel:010-5141-8109",sms:"sms:010-5141-8109"},mother:{name:"김나현",tel:"tel:010-2251-4026",sms:"sms:010-2251-4026"}}}}};return n(ee,{"data-scroll":!0,children:[e(ie,{children:"축하 연락처"}),n(ne,{children:[n("ul",{children:[n(B,{children:[e(G,{children:"신랑 김우준"}),e(C,{href:i.contact.bridegroom.tel}),e(j,{href:i.contact.bridegroom.sms})]}),n(B,{children:[e(G,{children:"신부 김소희"}),e(C,{href:i.contact.bride.tel}),e(j,{href:i.contact.bride.sms})]})]}),n(te,{children:[e("ul",{children:n("li",{children:[e(D,{children:"신랑측 혼주"}),n("ul",{children:[n(B,{children:[e($,{children:"혼주 김동필"}),e(C,{href:i.contact.bridegroom.parents.father.tel}),e(j,{href:i.contact.bridegroom.parents.father.sms})]}),n(B,{children:[e($,{children:"혼주 백숙현"}),e(C,{href:i.contact.bridegroom.parents.mother.tel}),e(j,{href:i.contact.bridegroom.parents.mother.sms})]})]})]})}),e("ul",{children:n("li",{children:[e(D,{children:"신부측 혼주"}),n("ul",{children:[n(B,{children:[e($,{children:"혼주 김상현"}),e(C,{href:i.contact.bride.parents.father.tel}),e(j,{href:i.contact.bride.parents.father.sms})]}),n(B,{children:[e($,{children:"혼주 김나현"}),e(C,{href:i.contact.bride.parents.mother.tel}),e(j,{href:i.contact.bride.parents.mother.sms})]})]})]})})]})]})]})},se="/wedding-card/assets/img_1-a4ac0188.jpeg",re="/wedding-card/assets/img_10-204ee8ad.jpeg",ae="/wedding-card/assets/img_11-31764165.jpeg",de="/wedding-card/assets/img_12-657798e6.jpeg",ce="/wedding-card/assets/img_13-98a2ac28.jpeg",le="/wedding-card/assets/img_14-a9168eb5.jpeg",pe="/wedding-card/assets/img_2-6f1d3554.jpeg",ge="/wedding-card/assets/img_3-18d9c9f5.jpeg",he="/wedding-card/assets/img_4-0b2a4ae3.jpeg",me="/wedding-card/assets/img_5-d161d436.jpeg",ue="/wedding-card/assets/img_6-3efe16b5.jpeg",xe="/wedding-card/assets/img_7-f218db53.jpeg",Ae="/wedding-card/assets/img_8-9fdc64f4.jpeg",fe="/wedding-card/assets/img_9-d0987053.jpeg",be="/wedding-card/assets/img_1-f2fd50ed.jpeg",_e="/wedding-card/assets/img_10-07ef3720.jpeg",we="/wedding-card/assets/img_11-23b737a3.jpeg",ve="/wedding-card/assets/img_12-bbd14a5b.jpeg",ye="/wedding-card/assets/img_13-00b68755.jpeg",ke="/wedding-card/assets/img_14-6f8687a2.jpeg",je="/wedding-card/assets/img_2-8701a851.jpeg",Ce="/wedding-card/assets/img_3-5d0c5887.jpeg",Be="/wedding-card/assets/img_4-096dadeb.jpeg",Se="/wedding-card/assets/img_5-2f5549e0.jpeg",$e="/wedding-card/assets/img_6-7d280603.jpeg",Re="/wedding-card/assets/img_7-f89f825a.jpeg",Te="/wedding-card/assets/img_8-78cd6d2c.jpeg",ze="/wedding-card/assets/img_9-df12a285.jpeg",Ie=["img_1","img_2","img_3","img_4","img_5","img_6","img_7","img_8","img_9","img_10","img_11","img_12","img_13","img_14"],Ee=t.figure`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -178,7 +178,7 @@ import{j as M,s as t,r,a as L,R as H,l as V,c as K,b as X,B as q,d as J,e as Q}f
     @media(min-width: 501px) {
         max-width: 600px;
     }
-`,Ne=t.button`
+`,Oe=t.button`
     pointer-events : all;
     z-inxex: 10;
     position: fixed;
@@ -211,7 +211,7 @@ import{j as M,s as t,r,a as L,R as H,l as V,c as K,b as X,B as q,d as J,e as Q}f
     &:hover {
         opacity: 0.5;
     }
-`,Oe=t.button`
+`,Ne=t.button`
     pointer-events : all;
     z-inxex: 10;
     position: fixed;
@@ -242,7 +242,7 @@ import{j as M,s as t,r,a as L,R as H,l as V,c as K,b as X,B as q,d as J,e as Q}f
     &:hover {
         opacity: 0.5;
     }
-`,We=({isSlideShow:i,setIsSlideShow:d,currentSlideNum:c})=>{const o=r.useRef([]),s=r.useRef(null),[a,l]=r.useState(0),x=()=>{if(o.current[0]&&s.current){const p=o.current[0].getBoundingClientRect().width,v=s.current.getBoundingClientRect().width;if(a===0){const k=v*-1+p;l(k)}else{const k=a+p;l(k)}}},h=()=>{if(o.current[0]&&s.current){const p=o.current[0].getBoundingClientRect().width;if(s.current.getBoundingClientRect().width<=Math.abs(a)+p)l(0);else{const k=a-p;l(k)}}};r.useEffect(()=>{if(i&&o.current[0]){const p=o.current[0].getBoundingClientRect().width,v=c===1?0:p*(c-1)*-1;l(v)}},[i]);let u=0,b=0;const m=p=>{u=p.pageX},A=(p,v)=>{p!=v&&(p<v?x():h())},_=p=>{b=p.pageX,A(u,b)};let g=!1;const f=p=>{if(p.touches.length>1){g=!0,p.isPropagationStopped();return}g=!1,u=p.touches[0].pageX},y=p=>{g||(b=p.changedTouches[0].pageX,A(u,b))},w=()=>d(!1),T=Ie.map((p,v)=>e(Ee,{children:e("img",{ref:W=>o.current[v]=W,src:(()=>new URL(Object.assign({"../assets/images/img_1.jpeg":be,"../assets/images/img_10.jpeg":_e,"../assets/images/img_11.jpeg":we,"../assets/images/img_12.jpeg":ve,"../assets/images/img_13.jpeg":ye,"../assets/images/img_14.jpeg":ke,"../assets/images/img_2.jpeg":je,"../assets/images/img_3.jpeg":Ce,"../assets/images/img_4.jpeg":Be,"../assets/images/img_5.jpeg":Se,"../assets/images/img_6.jpeg":$e,"../assets/images/img_7.jpeg":Re,"../assets/images/img_8.jpeg":Te,"../assets/images/img_9.jpeg":ze})[`../assets/images/${p}.jpeg`],self.location).href)(),"data-value":p,alt:"갤러리 이미지"})},v));return i?n(Me,{children:[n(Le,{children:[e(Ge,{children:"이미지 팝업창"}),e(Fe,{ref:s,style:{left:a},onMouseDown:m,onMouseUp:_,onTouchStart:f,onTouchEnd:y,children:T}),n(Pe,{children:[e(Ne,{onClick:x,children:"이전"}),e(Oe,{onClick:h,children:"다음"})]}),e(Ue,{onClick:w,children:"팝업창 닫기"})]}),e(De,{onClick:w})]}):e(D,{})},He=t.section`
+`,We=({isSlideShow:i,setIsSlideShow:d,currentSlideNum:c})=>{const o=r.useRef([]),s=r.useRef(null),[a,l]=r.useState(0),x=()=>{if(o.current[0]&&s.current){const p=o.current[0].getBoundingClientRect().width,v=s.current.getBoundingClientRect().width;if(a===0){const k=v*-1+p;l(k)}else{const k=a+p;l(k)}}},h=()=>{if(o.current[0]&&s.current){const p=o.current[0].getBoundingClientRect().width;if(s.current.getBoundingClientRect().width<=Math.abs(a)+p)l(0);else{const k=a-p;l(k)}}};r.useEffect(()=>{if(i&&o.current[0]){const p=o.current[0].getBoundingClientRect().width,v=c===1?0:p*(c-1)*-1;l(v)}},[i]);let u=0,b=0;const m=p=>{u=p.pageX},A=(p,v)=>{p!=v&&(p<v?x():h())},_=p=>{b=p.pageX,A(u,b)};let g=!1;const f=p=>{if(p.touches.length>1){g=!0,p.isPropagationStopped();return}g=!1,u=p.touches[0].pageX},y=p=>{g||(b=p.changedTouches[0].pageX,A(u,b))},w=()=>d(!1),N=Ie.map((p,v)=>e(Ee,{children:e("img",{ref:W=>o.current[v]=W,src:(()=>new URL(Object.assign({"../assets/images/img_1.jpeg":be,"../assets/images/img_10.jpeg":_e,"../assets/images/img_11.jpeg":we,"../assets/images/img_12.jpeg":ve,"../assets/images/img_13.jpeg":ye,"../assets/images/img_14.jpeg":ke,"../assets/images/img_2.jpeg":je,"../assets/images/img_3.jpeg":Ce,"../assets/images/img_4.jpeg":Be,"../assets/images/img_5.jpeg":Se,"../assets/images/img_6.jpeg":$e,"../assets/images/img_7.jpeg":Re,"../assets/images/img_8.jpeg":Te,"../assets/images/img_9.jpeg":ze})[`../assets/images/${p}.jpeg`],self.location).href)(),"data-value":p,alt:"갤러리 이미지"})},v));return i?n(Me,{children:[n(Le,{children:[e(Ge,{children:"이미지 팝업창"}),e(Fe,{ref:s,style:{left:a},onMouseDown:m,onMouseUp:_,onTouchStart:f,onTouchEnd:y,children:N}),n(Pe,{children:[e(Oe,{onClick:x,children:"이전"}),e(Ne,{onClick:h,children:"다음"})]}),e(Ue,{onClick:w,children:"팝업창 닫기"})]}),e(De,{onClick:w})]}):e(L,{})},He=t.section`
     padding: 36px 0;
 
     margin: 10px;
@@ -299,7 +299,7 @@ import{j as M,s as t,r,a as L,R as H,l as V,c as K,b as X,B as q,d as J,e as Q}f
     font-weight: bold;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     background: #000;
-`,Je=["img_1","img_2","img_3","img_4"],Qe=["img_1","img_2","img_3","img_4","img_5","img_6","img_7","img_8","img_9","img_10","img_11","img_12","img_13","img_14"],Ye=()=>{const i=r.useRef([]),[d,c]=r.useState(Je),[o,s]=r.useState(!1),[a,l]=r.useState(0);r.useEffect(()=>{document.documentElement.style.overflow=o?"hidden":"auto"},[o]);const x=()=>{i&&i.current&&i.current.length!==0&&i.current.map(m=>{const A=m,_=A.naturalWidth;A.naturalHeight>_&&A.setAttribute("class","is-height-long")})};r.useEffect(()=>{document.readyState==="complete"?x():window.addEventListener("load",x)},[]);const h=m=>{c(Qe),m.target.remove()},u=m=>{const A=m.target.getAttribute("data-value");s(!0);const _=Number(A.split("img_")[1]);l(_)},b=d.map((m,A)=>e(Ve,{children:e("img",{ref:g=>i.current[A]=g,src:(()=>new URL(Object.assign({"../assets/images/thumbnail/img_1.jpeg":se,"../assets/images/thumbnail/img_10.jpeg":re,"../assets/images/thumbnail/img_11.jpeg":ae,"../assets/images/thumbnail/img_12.jpeg":de,"../assets/images/thumbnail/img_13.jpeg":ce,"../assets/images/thumbnail/img_14.jpeg":le,"../assets/images/thumbnail/img_2.jpeg":pe,"../assets/images/thumbnail/img_3.jpeg":ge,"../assets/images/thumbnail/img_4.jpeg":he,"../assets/images/thumbnail/img_5.jpeg":me,"../assets/images/thumbnail/img_6.jpeg":ue,"../assets/images/thumbnail/img_7.jpeg":xe,"../assets/images/thumbnail/img_8.jpeg":Ae,"../assets/images/thumbnail/img_9.jpeg":fe})[`../assets/images/thumbnail/${m}.jpeg`],self.location).href)(),"data-value":m,onClick:u,alt:"갤러리 이미지"})},A));return n(He,{"data-scroll":!0,children:[e(Xe,{children:"갤러리"}),e(Ke,{children:b}),e(qe,{onClick:h,children:"갤러리 더보기"}),e(We,{isSlideShow:o,setIsSlideShow:s,currentSlideNum:a})]})},Ze=async i=>await L({url:"/api/create/guestbook",baseURL:window.location.hostname==="localhost"||window.location.hostname==="192.168.10.131"?"http://127.0.0.1:8000":"https://greensohee.com",method:"post",headers:{"content-Type":"application/json"},maxRedirects:2,data:{...i}}),et=async()=>await L({url:"/api/read/guestbook",baseURL:window.location.hostname==="localhost"||window.location.hostname==="192.168.10.131"?"http://127.0.0.1:8000":"https://greensohee.com",method:"get",headers:{"content-Type":"application/json"},maxRedirects:2}),tt=async i=>await L({url:"/api/delete/guestbook",baseURL:window.location.hostname==="localhost"||window.location.hostname==="192.168.10.131"?"http://127.0.0.1:8000":"https://greensohee.com",method:"post",headers:{"content-Type":"application/json"},maxRedirects:2,data:{id:i}}),nt={id:1,name:"홍길동",content:"신랑, 신부에게 축하의 메세지를 남겨주세요 :)",password:""},U={name:"",content:"",password:""},it=()=>{const[i,d]=r.useState([nt]),[c,o]=r.useState(U),[s,a]=r.useState(!1),[l,x]=r.useState(!1),h=r.useRef(null),u=()=>et().then(g=>d(g.data.data)),b=g=>{const f=prompt("내용을 삭제하시려면, 비밀번호를 입력해주세요."),y=i.filter(w=>w.id===g);f===y[0].password?(alert("내용이 삭제되었습니다."),tt(g),u()):f&&alert("비밀번호가 맞지 않습니다 :(")};r.useEffect(()=>{u(),console.log("guestBooks => ",i)},[]),r.useEffect(()=>{const{name:g,content:f,password:y}=c;x(!!(g&&f&&y))},[c]);const m=g=>{const f=g.target,y=f.value,w=f.name;o({...c,[w]:y})},A=()=>{o(U),a(!1),h.current&&h.current.focus(),u()};return{handleSubmit:async g=>{g.preventDefault(),a(!0),l&&Ze(c).then(f=>{f.data.result&&(alert("정상적으로 입력이 완료되었습니다."),A())})},handleChange:m,isSubmitEnter:s,inputDatas:c,guestBooks:i,nameRef:h,onClickDeleteBtn:b}},ot=t.section`
+`,Je=["img_1","img_2","img_3","img_4"],Qe=["img_1","img_2","img_3","img_4","img_5","img_6","img_7","img_8","img_9","img_10","img_11","img_12","img_13","img_14"],Ye=()=>{const i=r.useRef([]),[d,c]=r.useState(Je),[o,s]=r.useState(!1),[a,l]=r.useState(0);r.useEffect(()=>{document.documentElement.style.overflow=o?"hidden":"auto"},[o]);const x=()=>{i&&i.current&&i.current.length!==0&&i.current.map(m=>{const A=m,_=A.naturalWidth;A.naturalHeight>_&&A.setAttribute("class","is-height-long")})};r.useEffect(()=>{document.readyState==="complete"?x():window.addEventListener("load",x)},[]);const h=m=>{c(Qe),m.target.remove()},u=m=>{const A=m.target.getAttribute("data-value");s(!0);const _=Number(A.split("img_")[1]);l(_)},b=d.map((m,A)=>e(Ve,{children:e("img",{ref:g=>i.current[A]=g,src:(()=>new URL(Object.assign({"../assets/images/thumbnail/img_1.jpeg":se,"../assets/images/thumbnail/img_10.jpeg":re,"../assets/images/thumbnail/img_11.jpeg":ae,"../assets/images/thumbnail/img_12.jpeg":de,"../assets/images/thumbnail/img_13.jpeg":ce,"../assets/images/thumbnail/img_14.jpeg":le,"../assets/images/thumbnail/img_2.jpeg":pe,"../assets/images/thumbnail/img_3.jpeg":ge,"../assets/images/thumbnail/img_4.jpeg":he,"../assets/images/thumbnail/img_5.jpeg":me,"../assets/images/thumbnail/img_6.jpeg":ue,"../assets/images/thumbnail/img_7.jpeg":xe,"../assets/images/thumbnail/img_8.jpeg":Ae,"../assets/images/thumbnail/img_9.jpeg":fe})[`../assets/images/thumbnail/${m}.jpeg`],self.location).href)(),"data-value":m,onClick:u,alt:"갤러리 이미지"})},A));return n(He,{"data-scroll":!0,children:[e(Xe,{children:"갤러리"}),e(Ke,{children:b}),e(qe,{onClick:h,children:"갤러리 더보기"}),e(We,{isSlideShow:o,setIsSlideShow:s,currentSlideNum:a})]})},Ze=async i=>await M({url:"/api/create/guestbook",baseURL:window.location.hostname==="localhost"||window.location.hostname==="192.168.10.131"?"http://127.0.0.1:8000":"https://greensohee.com",method:"post",headers:{"content-Type":"application/json"},maxRedirects:2,data:{...i}}),et=async()=>await M({url:"/api/read/guestbook",baseURL:window.location.hostname==="localhost"||window.location.hostname==="192.168.10.131"?"http://127.0.0.1:8000":"https://greensohee.com",method:"get",headers:{"content-Type":"application/json"},maxRedirects:2}),tt=async i=>await M({url:"/api/delete/guestbook",baseURL:window.location.hostname==="localhost"||window.location.hostname==="192.168.10.131"?"http://127.0.0.1:8000":"https://greensohee.com",method:"post",headers:{"content-Type":"application/json"},maxRedirects:2,data:{id:i}}),nt={id:1,name:"홍길동",content:"신랑, 신부에게 축하의 메세지를 남겨주세요 :)",password:""},F={name:"",content:"",password:""},it=()=>{const[i,d]=r.useState([nt]),[c,o]=r.useState(F),[s,a]=r.useState(!1),[l,x]=r.useState(!1),h=r.useRef(null),u=()=>et().then(g=>d(g.data.data)),b=g=>{const f=prompt("내용을 삭제하시려면, 비밀번호를 입력해주세요."),y=i.filter(w=>w.id===g);f===y[0].password?(alert("내용이 삭제되었습니다."),tt(g),u()):f&&alert("비밀번호가 맞지 않습니다 :(")};r.useEffect(()=>{u(),console.log("guestBooks => ",i)},[]),r.useEffect(()=>{const{name:g,content:f,password:y}=c;x(!!(g&&f&&y))},[c]);const m=g=>{const f=g.target,y=f.value,w=f.name;o({...c,[w]:y})},A=()=>{o(F),a(!1),h.current&&h.current.focus(),u()};return{handleSubmit:async g=>{g.preventDefault(),a(!0),l&&Ze(c).then(f=>{f.data.result&&(alert("정상적으로 입력이 완료되었습니다."),A())})},handleChange:m,isSubmitEnter:s,inputDatas:c,guestBooks:i,nameRef:h,onClickDeleteBtn:b}},ot=t.section`
     padding: 36px 16px;
     font-size: 16px;
 
@@ -361,7 +361,7 @@ import{j as M,s as t,r,a as L,R as H,l as V,c as K,b as X,B as q,d as J,e as Q}f
     font-size: 22px;
     padding-bottom: 10px;
     text-align: center;
-`,z=t.div`
+`,T=t.div`
     font-size: 15px;
     padding: 0 4px 8px 4px;
     word-break: keep-all;
@@ -411,7 +411,7 @@ import{j as M,s as t,r,a as L,R as H,l as V,c as K,b as X,B as q,d as J,e as Q}f
     &:after {
         transform: translate(-50%, -50%) rotate(-45deg);
     }
-`,I={name:"이름을 입력해주세요.",content:"내용을 입력해주세요.",password:"비밀번호를 입력해주세요. (메세지 삭제할 때 필요)"},ut=()=>{const{handleSubmit:i,handleChange:d,isSubmitEnter:c,inputDatas:o,guestBooks:s,nameRef:a,onClickDeleteBtn:l}=it(),x=r.useRef(null);return n(ot,{"data-scroll":!0,ref:x,children:[e(pt,{children:"게스트 북"}),e(st,{children:n("form",{onSubmit:i,children:[n("div",{children:[e(rt,{name:"name",type:"text",placeholder:"이름",onChange:d,value:o.name,ref:a}),e(z,{children:c&&o.name===""?I.name:""})]}),n("div",{children:[e(at,{name:"content",rows:2,placeholder:"축하 내용을 입력해주세요!",onChange:d,value:o.content}),e(z,{children:c&&o.content===""?I.content:""})]}),n(ct,{children:[n("div",{children:[e(dt,{name:"password",type:"password",placeholder:"비밀번호 입력",onChange:d,value:o.password}),e(z,{children:c&&o.password===""?I.password:""})]}),e(lt,{type:"submit",children:"입력"})]})]})}),e("section",{children:s.map((h,u)=>n(gt,{children:[n(ht,{children:[n("li",{children:["이름 : ",h.name]}),e("li",{children:h.content})]}),h.id===1?e(D,{}):e(mt,{type:"button",onClick:()=>l(h.id),children:"삭제"})]},`guest-${u}`))})]})},xt=t.section`
+`,z={name:"이름을 입력해주세요.",content:"내용을 입력해주세요.",password:"비밀번호를 입력해주세요. (메세지 삭제할 때 필요)"},ut=()=>{const{handleSubmit:i,handleChange:d,isSubmitEnter:c,inputDatas:o,guestBooks:s,nameRef:a,onClickDeleteBtn:l}=it(),x=r.useRef(null);return n(ot,{"data-scroll":!0,ref:x,children:[e(pt,{children:"게스트 북"}),e(st,{children:n("form",{onSubmit:i,children:[n("div",{children:[e(rt,{name:"name",type:"text",placeholder:"이름",onChange:d,value:o.name,ref:a}),e(T,{children:c&&o.name===""?z.name:""})]}),n("div",{children:[e(at,{name:"content",rows:2,placeholder:"축하 내용을 입력해주세요!",onChange:d,value:o.content}),e(T,{children:c&&o.content===""?z.content:""})]}),n(ct,{children:[n("div",{children:[e(dt,{name:"password",type:"password",placeholder:"비밀번호 입력",onChange:d,value:o.password}),e(T,{children:c&&o.password===""?z.password:""})]}),e(lt,{type:"submit",children:"입력"})]})]})}),e("section",{children:s.map((h,u)=>n(gt,{children:[n(ht,{children:[n("li",{children:["이름 : ",h.name]}),e("li",{children:h.content})]}),h.id===1?e(L,{}):e(mt,{type:"button",onClick:()=>l(h.id),children:"삭제"})]},`guest-${u}`))})]})},xt=t.section`
     padding: 80px 0;
     display: flex;
     align-items: center;
@@ -524,7 +524,7 @@ import{j as M,s as t,r,a as L,R as H,l as V,c as K,b as X,B as q,d as J,e as Q}f
     font-size: 22px;
     padding-bottom: 10px;
     text-align: center;
-`,E=t.ul`
+`,I=t.ul`
     & > li {
         position: relative;
         padding-left: 10px;
@@ -536,15 +536,15 @@ import{j as M,s as t,r,a as L,R as H,l as V,c as K,b as X,B as q,d as J,e as Q}f
             left:0;
         }
     }
-`,P=t.h3`
+`,U=t.h3`
     margin-bottom: 6px;
     font-size: 18px;
     font-weight: bold;
-`,N=t.div`
+`,P=t.div`
     margin-top: 20px;
 `,Ft=t.div`
     padding: 16px;
-`,Ut=()=>n(Dt,{"data-scroll":!0,children:[e(Gt,{children:"오시는 길"}),e(Lt,{}),n(Ft,{children:[n(E,{children:[e("li",{children:"분당앤스퀘어 4층 컨벤션홀"}),e("li",{children:"경기 성남시 분당구 탄천상로151번길 20 4층"})]}),n(N,{children:[e(P,{children:"지하철"}),e(E,{children:e("li",{children:"(수인분당) 오리역 6번 출구에서 도보 3분"})})]}),n(N,{children:[e(P,{children:"자가용"}),n(E,{children:[e("li",{children:'내비게이션 이용 시 : "분당앤스퀘어" 를 입력해주세요.'}),e("li",{children:"신 주소 : 경기 성남시 분당구 탄천상로151번길 20"}),e("li",{children:"구 주소 : 경기 성남시 분당구 구미동 159"}),e("li",{children:"주차장 : 분당앤스퀘어 지하 3, 4층에 주차하시면 됩니다."})]})]})]})]}),Pt=t.div`
+`,Ut=()=>n(Dt,{"data-scroll":!0,children:[e(Gt,{children:"오시는 길"}),e(Lt,{}),n(Ft,{children:[n(I,{children:[e("li",{children:"분당앤스퀘어 4층 컨벤션홀"}),e("li",{children:"경기 성남시 분당구 탄천상로151번길 20 4층"})]}),n(P,{children:[e(U,{children:"지하철"}),e(I,{children:e("li",{children:"(수인분당) 오리역 6번 출구에서 도보 3분"})})]}),n(P,{children:[e(U,{children:"자가용"}),n(I,{children:[e("li",{children:'내비게이션 이용 시 : "분당앤스퀘어" 를 입력해주세요.'}),e("li",{children:"신 주소 : 경기 성남시 분당구 탄천상로151번길 20"}),e("li",{children:"구 주소 : 경기 성남시 분당구 구미동 159"}),e("li",{children:"주차장 : 분당앤스퀘어 지하 3, 4층에 주차하시면 됩니다."})]})]})]})]}),Pt=t.div`
     z-index: 9999;
     overflow:hidden;
     position: fixed;
@@ -555,7 +555,7 @@ import{j as M,s as t,r,a as L,R as H,l as V,c as K,b as X,B as q,d as J,e as Q}f
     display: flex;
     align-items: center;
     justify-content: center;
-`,Nt=t.section`
+`,Ot=t.section`
     z-index: 2;
     overflow: hidden;
     display: flex;
@@ -566,7 +566,7 @@ import{j as M,s as t,r,a as L,R as H,l as V,c as K,b as X,B as q,d as J,e as Q}f
     margin: auto;
     background-color: #fff;
     border: 1px solid #000;
-`,Ot=t.div`
+`,Nt=t.div`
     position:absolute;
     width: 100%;
     height: 100%;
@@ -610,7 +610,6 @@ import{j as M,s as t,r,a as L,R as H,l as V,c as K,b as X,B as q,d as J,e as Q}f
             border-bottom: 0;
         }
     }
-
 `,Xt=t.input`
     position: absolute;
     width: 1px;
@@ -620,7 +619,7 @@ import{j as M,s as t,r,a as L,R as H,l as V,c as K,b as X,B as q,d as J,e as Q}f
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
-`,qt=({isShow:i,setIsShow:d,data:c})=>{const[o,s]=r.useState(""),[a,l]=r.useState(""),[x,h]=r.useState(""),[u,b]=r.useState(""),m=r.useRef(null);r.useEffect(()=>{const g=c.split(","),[f,y,w]=g;if(s(f),l(y),h(w),w){const T=w.split(" ")[1];b(T)}},[c]);const A=()=>{if(m&&m.current){const g=m.current;g.select(),document.execCommand("copy"),alert(`${g.getAttribute("data-alert")} 복사되었습니다.`)}},_=()=>{d(!1)};return i?n(Pt,{children:[n(Nt,{children:[n(Ht,{children:[e("span",{children:a}),"측 계좌번호"]}),e(Vt,{children:"복사 버튼 클릭하시면 계좌번호가 복사됩니다."}),n(Kt,{children:[e("li",{children:o}),n("li",{children:[x,e(Xt,{type:"input",ref:m,value:u||"","data-alert":x,readOnly:!0})]})]}),n(Wt,{children:[e("button",{type:"button",onClick:A,children:"복사"}),e("button",{type:"button",onClick:_,children:"닫기"})]})]}),e(Ot,{onClick:_})]}):e(D,{})},Jt=t.section`
+`,qt=({isShow:i,setIsShow:d,data:c})=>{const[o,s]=r.useState(""),[a,l]=r.useState(""),[x,h]=r.useState(""),[u,b]=r.useState(""),m=r.useRef(null);r.useEffect(()=>{const g=c.split(","),[f,y,w]=g;s(f),l(y),h(w),w&&b(w)},[c]);const A=()=>{if(m&&m.current){const g=m.current;g.select(),document.execCommand("copy"),alert(`${g.getAttribute("data-alert")} 복사되었습니다.`)}},_=()=>d(!1);return i?n(Pt,{children:[n(Ot,{children:[n(Ht,{children:[e("span",{children:a}),"측 계좌번호"]}),e(Vt,{children:"복사 버튼 클릭하시면 계좌번호가 복사됩니다."}),n(Kt,{children:[e("li",{children:o}),n("li",{children:[x,e(Xt,{type:"input",ref:m,value:u||"","data-alert":x,readOnly:!0})]})]}),n(Wt,{children:[e("button",{type:"button",onClick:A,children:"복사"}),e("button",{type:"button",onClick:_,children:"닫기"})]})]}),e(Nt,{onClick:_})]}):e(L,{})},Jt=t.section`
     // min-height: 640px;
     padding: 36px;
     align-items: center;
