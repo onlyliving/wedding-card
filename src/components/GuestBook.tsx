@@ -31,6 +31,9 @@ const InputName = styled.input`
     border-bottom: 1px solid #000;
     border-radius: 0px;
     box-sizing: border-box;
+    &:focus {
+        border-bottom: 1px solid #FF9800;
+    }
 `;
 
 const Textarea = styled.textarea`
@@ -42,6 +45,9 @@ const Textarea = styled.textarea`
     border-bottom: 1px solid #000;
     border-radius: 0px;
     box-sizing: border-box;
+    &:focus {
+        border-bottom: 1px solid #FF9800;
+    }
 `;
 
 const InputPw = styled.input`
@@ -51,6 +57,9 @@ const InputPw = styled.input`
     border-bottom: 1px solid #000;
     border-radius: 0px;
     box-sizing: border-box;
+    &:focus {
+        border-bottom: 1px solid #FF9800;
+    }
 `;
 
 const SubmitWrap = styled.div`
@@ -77,6 +86,7 @@ const Note = styled.div`
     font-size: 15px;
     padding: 0 4px 8px 4px;
     word-break: keep-all;
+    color: #FF9800;
 `;
 
 const ListBox = styled.div`

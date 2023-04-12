@@ -11,7 +11,6 @@ const Content = styled.section`
     display: flex;
     flex-direction: column;
     text-align: center;
-    
     margin: 10px;
     box-shadow: 0px 0px 0 1px rgba(32, 71, 84, 0.03), 0px 0px 0 3px rgba(32, 71, 84, 0.02);;
     border-radius: 14px;
@@ -34,7 +33,6 @@ const BoxWrap = styled.ul`
     border: 1px solid #e0e0e0;
     text-align: left;
     border-radius: 8px;
-
     & > li {
         display: flex;
         align-items: center;
@@ -48,25 +46,19 @@ const BoxWrap = styled.ul`
             padding: 10px 12px;
         }
     }
-
 `;
 
 const Button = styled.button`
-    // padding: 6px;
     border-left: 1px solid #e0e0e0;
     cursor: pointer;
     min-width: 90px;
 `;
 
 export default () => {
-
     const [isShow, setIsShow] = useState(false);
     const [value, setValue] = useState("");
-
-
     const handleBtnClick = (event: React.MouseEvent) => {
         const getValue = (event.target as HTMLButtonElement).getAttribute("data-value");
-
         console.log("getValue =>", getValue);
         if (getValue) {
             setValue(getValue);
@@ -74,9 +66,8 @@ export default () => {
         }
     };
 
-
     return (
-        <Content style={{ display: "none" }}>
+        <Content>
             <Title>축하의 마음 전하기</Title>
             <Div>
                 <BoxWrap>
@@ -84,7 +75,7 @@ export default () => {
                         <span>김우준</span>
                         <Button
                             type="button"
-                            data-value="김우준,신랑,신한 11111"
+                            data-value="김우준,신랑,국민은행 95101265964"
                             onClick={handleBtnClick}
                         >
                             계좌
@@ -94,7 +85,7 @@ export default () => {
                         <span>김동필</span>
                         <Button
                             type="button"
-                            data-value="김동필,신랑,신한 11111"
+                            data-value="김동필,신랑,SC제일은행 43320089765"
                             onClick={handleBtnClick}
                         >
                             계좌
@@ -104,7 +95,7 @@ export default () => {
                         <span>백숙현</span>
                         <Button
                             type="button"
-                            data-value="백숙현,신랑,신한 11111"
+                            data-value="백숙현,신랑,농협은행 10502330024"
                             onClick={handleBtnClick}
                         >
                             계좌
@@ -116,17 +107,17 @@ export default () => {
                         <span>김소희</span>
                         <Button
                             type="button"
-                            data-value="김소희,신부,신한 110214034940"
+                            data-value="김소희,신부,신한은행 110411955765"
                             onClick={handleBtnClick}
                         >
-                            계 좌
+                            계좌
                         </Button>
                     </li>
                     <li>
                         <span>김상현</span>
                         <Button
                             type="button"
-                            data-value="김상현,신부,신한 11111"
+                            data-value="김상현,신부,국민은행 284210052682"
                             onClick={handleBtnClick}
                         >
                             계좌
@@ -136,7 +127,7 @@ export default () => {
                         <span>김나현</span>
                         <Button
                             type="button"
-                            data-value="김나현,신부,신한 11111"
+                            data-value="김나현,신부,국민은행 284240015077"
                             onClick={handleBtnClick}
                         >
                             계좌

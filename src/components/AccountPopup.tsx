@@ -57,6 +57,10 @@ const Title = styled.h3`
     margin: 30px 0 16px 0;
 `;
 
+const SubText = styled.p`
+    font-size: 16px;
+`;
+
 const BoxWrap = styled.ul`
     width: 90%;
     max-width: 320px;
@@ -74,10 +78,6 @@ const BoxWrap = styled.ul`
         &:last-child {
             border-bottom: 0;
         }
-        // & > span,
-        // & > button{
-        //     padding: 10px 12px;
-        // }
     }
 
 `;
@@ -144,7 +144,7 @@ export default ({
             <Container>
                 <Content>
                     <Title><span>{type}</span>측 계좌번호</Title>
-                    <p>복사 버튼 클릭 시, 복사됩니다.</p>
+                    <SubText>복사 버튼 클릭하시면 계좌번호가 복사됩니다.</SubText>
                     <BoxWrap>
                         <li>
                             {name}
