@@ -46,6 +46,7 @@ const ButtonWrap = styled.div`
         height: 60px;
         padding: 0;
         font-weight: bold;
+        color: #000;
         &:first-child {
             color: #fff;
             background-color: #000;
