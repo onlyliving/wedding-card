@@ -583,6 +583,7 @@ import{j as E,s as t,r,a as M,R as H,l as V,c as K,b as X,B as q,d as J,e as Q}f
         height: 60px;
         padding: 0;
         font-weight: bold;
+        color: #000;
         &:first-child {
             color: #fff;
             background-color: #000;
