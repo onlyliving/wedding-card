@@ -50,8 +50,9 @@ const BoxWrap = styled.ul`
 
 const Button = styled.button`
     border-left: 1px solid #e0e0e0;
-    cursor: pointer;
     min-width: 90px;
+    color: #2196F3;
+    cursor: pointer;
 `;
 
 export default () => {
@@ -72,17 +73,7 @@ export default () => {
             <Div>
                 <BoxWrap>
                     <li>
-                        <span>김우준</span>
-                        <Button
-                            type="button"
-                            data-value="김우준,신랑,국민은행 95101265964"
-                            onClick={handleBtnClick}
-                        >
-                            계좌
-                        </Button>
-                    </li>
-                    <li>
-                        <span>김동필</span>
+                        <span>신랑 아버지</span>
                         <Button
                             type="button"
                             data-value="김동필,신랑,SC제일은행 43320089765"
@@ -92,7 +83,7 @@ export default () => {
                         </Button>
                     </li>
                     <li>
-                        <span>백숙현</span>
+                        <span>신랑 어머니</span>
                         <Button
                             type="button"
                             data-value="백숙현,신랑,농협은행 10502330024"
@@ -104,17 +95,7 @@ export default () => {
                 </BoxWrap>
                 <BoxWrap>
                     <li>
-                        <span>김소희</span>
-                        <Button
-                            type="button"
-                            data-value="김소희,신부,신한은행 110411955765"
-                            onClick={handleBtnClick}
-                        >
-                            계좌
-                        </Button>
-                    </li>
-                    <li>
-                        <span>김상현</span>
+                        <span>신부 아버지</span>
                         <Button
                             type="button"
                             data-value="김상현,신부,국민은행 284210052682"
@@ -124,7 +105,7 @@ export default () => {
                         </Button>
                     </li>
                     <li>
-                        <span>김나현</span>
+                        <span>신부 어머니</span>
                         <Button
                             type="button"
                             data-value="김나현,신부,국민은행 284240015077"
