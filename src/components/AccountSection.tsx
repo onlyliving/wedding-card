@@ -60,7 +60,6 @@ export default () => {
     const [value, setValue] = useState("");
     const handleBtnClick = (event: React.MouseEvent) => {
         const getValue = (event.target as HTMLButtonElement).getAttribute("data-value");
-        console.log("getValue =>", getValue);
         if (getValue) {
             setValue(getValue);
             setIsShow(true);

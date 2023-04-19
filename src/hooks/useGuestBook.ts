@@ -42,7 +42,6 @@ export const useGuestBook = () => {
 
     useEffect(() => {
         loadGuestBook();
-        console.log("guestBooks => ", guestBooks);
     }, []);
 
     // useEffect(() => {
