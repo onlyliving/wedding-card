@@ -17,7 +17,8 @@ const Title = styled.h2`
     padding: 0 0 10px 0
 `;
 
-const Video = styled.video` 
+const Video = styled.iframe` 
+    aspect-ratio: 16 / 9;
     width: 100%;
     border-radius: 8px;
 `;
@@ -27,9 +28,13 @@ export default () => {
     return (
         <Content data-scroll>
             <Title>오리역에서 분당앤스퀘어 가는길</Title>
-            <Video controls>
-                <source src="assets/videos/contact.mp4" type="video/mp4" />
-            </Video>
+            <Video
+                src="https://www.youtube.com/embed/iVZnkDJcwrI"
+                title="오리역에서 분당앤스퀘어 가는길"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                frameBorder="false"
+            />
         </Content>
     )
 };
