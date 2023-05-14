@@ -15,10 +15,6 @@ const Content = styled.section`
 `;
 
 const FixedInputBox = styled.div`
-    // position: fixed;
-    // bottom: 0;
-    // padding: 16px;
-    // margin-left: -16px;
     margin: 16px auto;
     width: 100%;
     max-width: 500px;
@@ -177,6 +173,8 @@ export default () => {
 
     const observeTarget = useRef(null);
 
+    const fixedMessage = guestBooks[0];
+
     return (
         <Content data-scroll ref={observeTarget}>
             <Title >게스트 북</Title>
@@ -197,28 +195,29 @@ export default () => {
                         </div>
                         <SubmitButton type="submit">입력</SubmitButton>
                     </SubmitWrap>
-
                 </form>
 
             </FixedInputBox>
             <section>
-                {guestBooks.map((guestData, guestIndex) => (
+                {fixedMessage && (
+                    <ListBox key={`guest-${fixedMessage.id}`}>
+                        <List>
+                            <li>이름 : {fixedMessage.name}</li>
+                            <li>{fixedMessage.content}</li>
+                        </List>
+                    </ListBox>
+                )}
+
+                {guestBooks.filter(item => item.id !== 1).sort((a, b) => b.id - a.id).map((guestData, guestIndex) => (
                     <ListBox key={`guest-${guestIndex}`}>
                         <List>
                             <li>이름 : {guestData.name}</li>
                             <li>{guestData.content}</li>
                         </List>
-
-                        {
-                            (guestData.id === 1) ? <></> :
-                                <DeleteBtn type="button" onClick={() => onClickDeleteBtn(guestData.id)}>삭제</DeleteBtn>
-                        }
-
+                        <DeleteBtn type="button" onClick={() => onClickDeleteBtn(guestData.id)}>삭제</DeleteBtn>
                     </ListBox>
                 ))}
             </section>
-
-
         </Content>
     )
 };
