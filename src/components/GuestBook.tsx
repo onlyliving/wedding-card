@@ -10,7 +10,8 @@ const Content = styled.section`
     margin: 10px;
     box-shadow: 0px 0px 0 1px rgba(32, 71, 84, 0.03), 0px 0px 0 3px rgba(32, 71, 84, 0.02);;
     border-radius: 14px;
-    background-color:#fff;
+    background-color: #000;
+    color: #fff;
 `;
 
 const FixedInputBox = styled.div`
@@ -21,18 +22,22 @@ const FixedInputBox = styled.div`
     margin: 16px auto;
     width: 100%;
     max-width: 500px;
-    background: #fff;
 `;
 
 const InputName = styled.input`
     width: 100%;
     padding: 8px;
     font-size: 16px;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #fff;
     border-radius: 0px;
     box-sizing: border-box;
+    background-color: transparent;
+    color: #efefef;
+    &::placeholder {
+        color: #f2f2f2;
+    }
     &:focus {
-        border-bottom: 1px solid #FF9800;
+        border-bottom: 1px solid #f79860;
     }
 `;
 
@@ -42,39 +47,47 @@ const Textarea = styled.textarea`
     padding: 8px;
     font-size: 16px;
     border: 0;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #fff;
     border-radius: 0px;
     box-sizing: border-box;
+    background-color: transparent;
+    color: #efefef;
+    &::placeholder {
+        color: #f2f2f2;
+    }
     &:focus {
-        border-bottom: 1px solid #FF9800;
+        border-bottom: 1px solid #f79860;
     }
 `;
 
 const InputPw = styled.input`
-    width: 100%;
+    width: calc(100% - 107px);
     padding: 8px;
     font-size: 16px;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #fff;
     border-radius: 0px;
     box-sizing: border-box;
+    background-color: transparent;
+    color: #efefef;
+    &::placeholder {
+        color: #f2f2f2;
+    }
     &:focus {
-        border-bottom: 1px solid #FF9800;
+        border-bottom: 1px solid #f79860;
     }
 `;
 
-const SubmitWrap = styled.div`
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-`;
-
-const Button = styled.button`
+const SubmitButton = styled.button`
+    width: 107px;
     height: 41px;
-    background: #000;
-    color: #fff;
+    position:absolute;
+    right: 0;
+    top: 0;
+    background: #fff;
+    color: #000;
     font-weight: bold;
     font-size: 16px;
 `;
-
 
 const Title = styled.h2`
     font-size: 22px;
@@ -84,17 +97,17 @@ const Title = styled.h2`
 
 const Note = styled.div`
     font-size: 15px;
-    padding: 0 4px 8px 4px;
+    padding: 3px 4px 8px 4px;
     word-break: keep-all;
-    color: #FF9800;
+    color: #f79860;
 `;
 
 const ListBox = styled.div`
     position:relative;
     border: 1px solid #e7e7e7;
-    background: #fff;
     padding: 8px;
     margin-top: 8px;
+    border-radius: 5px;
 `;
 
 const List = styled.ul`
@@ -126,7 +139,7 @@ const DeleteBtn = styled.button`
         content: '';
         width: 13px;
         height 1px;
-        background: #000;
+        background: #fff;
         position:absolute;
         left: 50%;
         top: 50%;
@@ -140,11 +153,14 @@ const DeleteBtn = styled.button`
     }
 `;
 
+const SubmitWrap = styled.div`
+    position:relative;
+`;
 
 const MESSAGE = {
     name: "이름을 입력해주세요.",
     content: "내용을 입력해주세요.",
-    password: "비밀번호를 입력해주세요. (메세지 삭제할 때 필요)"
+    password: "비밀번호를 입력해주세요. (메세지 삭제시 필요)"
 };
 
 export default () => {
@@ -176,11 +192,12 @@ export default () => {
                     </div>
                     <SubmitWrap>
                         <div>
-                            <InputPw name="password" type="password" placeholder="비밀번호 입력" onChange={handleChange} value={inputDatas.password} />
+                            <InputPw name="password" type="password" placeholder="비밀번호 생성" onChange={handleChange} value={inputDatas.password} />
                             <Note>{isSubmitEnter && inputDatas.password === "" ? MESSAGE.password : ""}</Note>
                         </div>
-                        <Button type="submit">입력</Button>
+                        <SubmitButton type="submit">입력</SubmitButton>
                     </SubmitWrap>
+
                 </form>
 
             </FixedInputBox>

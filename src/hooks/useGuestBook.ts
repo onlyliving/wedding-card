@@ -4,6 +4,7 @@ import { GuestBookProps, GuestBookApiReturns } from "../api/index";
 import { postGuestBook } from "../api/postGuestBook";
 import { getGuestBook } from "../api/getGuestBook";
 import { deleteGuestBook } from "../api/deleteGuestBook";
+import bcrypt from "bcryptjs";
 
 const defaultData = {
     id: 1,
@@ -29,14 +30,16 @@ export const useGuestBook = () => {
     const loadGuestBook = () => getGuestBook().then((res) => setGuestBooks(res.data.data));
 
     const onClickDeleteBtn = (id: number) => {
-        const inputPassword = prompt("내용을 삭제하시려면, 비밀번호를 입력해주세요.");
+        const inputPassword = prompt("내용을 삭제하시겠습니까? 아래 입력창에 비밀번호를 입력해주세요.");
+        if (!inputPassword) return false;
+
         const targetData = guestBooks.filter((item) => item.id === id);
-        if (inputPassword === targetData[0].password) {
+        if (bcrypt.compareSync(inputPassword, targetData[0].password)) {
             alert("내용이 삭제되었습니다.");
             deleteGuestBook(id);
             loadGuestBook();
         } else if (inputPassword) {
-            alert("비밀번호가 맞지 않습니다 :(");
+            alert("비밀번호가 맞지 않습니다 :(\n비밀번호가 기억나지 않으시면, 신부 김소희한테 문의주세요.");
         }
     };
 
@@ -83,7 +86,9 @@ export const useGuestBook = () => {
         setIsSubmitEnter(true);
 
         if (isPass) {
-            postGuestBook(inputDatas).then((res) => {
+            const pwHash = bcrypt.hashSync(inputDatas.password, bcrypt.genSaltSync(10));
+            const reqData = { ...inputDatas, password: pwHash };
+            postGuestBook(reqData).then((res) => {
                 if (res.data.result) {
                     alert("정상적으로 입력이 완료되었습니다.");
                     updateGuestBook();

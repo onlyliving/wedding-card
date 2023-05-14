@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React, { useEffect, useLayoutEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 import ImageSlidePopup from "./ImageSlidePopup";
 
@@ -25,18 +25,10 @@ const GridItem = styled.figure`
     cursor: pointer;
 
     & > img{
-        height: 100%;
-        width: auto;
+        min-height: 100%;
+        min-width: 100%;
+        object-fit: cover;
     }
-
-    & > img.is-height-long {
-        width: 100%;
-        height: auto;
-    }
-
-    // &:nth-child(2n-1) {
-    //     grid-row-end: span 2;
-    // }
 `;
 
 const GridContainer = styled.div`
@@ -92,6 +84,16 @@ const thumbnailList = [
     "img_12",
     "img_13",
     "img_14",
+    "img_15",
+    "img_16",
+    "img_17",
+    "img_18",
+    "img_19",
+    "img_20",
+    "img_21",
+    "img_22",
+    "img_23",
+    "img_24",
 ];
 
 export default () => {
@@ -114,33 +116,6 @@ export default () => {
 
     }, [isSlideShow]);
 
-    const setImgAddHeightLong = () => {
-        if (imgRef && imgRef.current && imgRef.current.length !== 0) {
-            imgRef.current.map(item => {
-                const targetImg = item as HTMLImageElement;
-                const getWidth = targetImg.naturalWidth;
-                const getHeight = targetImg.naturalHeight;
-
-                if (getHeight > getWidth) {
-                    targetImg.setAttribute("class", "is-height-long");
-                }
-            })
-        }
-    }
-
-    useEffect(() => {
-        if (document.readyState === "complete") {
-            // safari
-            setImgAddHeightLong();
-
-        } else {
-            // chrome
-            window.addEventListener("load", setImgAddHeightLong);
-        }
-
-
-    }, []);
-
     const handleGalleryMoreBtn = (event: React.MouseEvent) => {
         setImgList(thumbnailList);
 
@@ -153,7 +128,6 @@ export default () => {
         const getNum = Number(getValue.split("img_")[1]);
         setCurrentSlideNum(getNum);
     };
-
 
     const ThumbnailList = imgList.map((imgName, idx) => {
         const getImgUrl = () => new URL(`../assets/images/thumbnail/${imgName}.jpeg`, import.meta.url).href;
@@ -171,7 +145,6 @@ export default () => {
             </GridItem>
         )
     });
-
 
     return (
         <Content data-scroll>

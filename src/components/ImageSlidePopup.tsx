@@ -16,6 +16,16 @@ const imageList = [
     "img_12",
     "img_13",
     "img_14",
+    "img_15",
+    "img_16",
+    "img_17",
+    "img_18",
+    "img_19",
+    "img_20",
+    "img_21",
+    "img_22",
+    "img_23",
+    "img_24",
 ];
 
 const GridItem = styled.figure`

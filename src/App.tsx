@@ -8,6 +8,7 @@ import IntroSection from "./components/IntroSection";
 import MainSection from "./components/MainSection";
 import MapSection from "./components/MapSection";
 import AccountSection from "./components/AccountSection";
+import ContactVideoSection from "./components/ContactVideoSection";
 
 export default () => {
 
@@ -25,6 +26,7 @@ export default () => {
             <ContactSection />
             <GallerySection />
             <MapSection />
+            <ContactVideoSection />
             <AccountSection />
             <GuestBook />
         </div>
