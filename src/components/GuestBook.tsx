@@ -185,7 +185,7 @@ export default () => {
                         <Note>{isSubmitEnter && inputDatas.name === "" ? MESSAGE.name : ""}</Note>
                     </div>
                     <div>
-                        <Textarea name="content" rows={2} placeholder="축하 내용을 입력해주세요!" onChange={handleChange} value={inputDatas.content} />
+                        <Textarea name="content" rows={1} placeholder="축하 내용을 입력해주세요!" onChange={handleChange} value={inputDatas.content} />
                         <Note>{isSubmitEnter && inputDatas.content === "" ? MESSAGE.content : ""}</Note>
                     </div>
                     <SubmitWrap>
