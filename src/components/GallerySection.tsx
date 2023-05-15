@@ -94,6 +94,10 @@ const thumbnailList = [
     "img_22",
     "img_23",
     "img_24",
+    "img_25",
+    "img_26",
+    "img_27",
+    "img_28",
 ];
 
 export default () => {
