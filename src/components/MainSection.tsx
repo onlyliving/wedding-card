@@ -51,6 +51,20 @@ const Dday = styled.p`
     color: #fff3ec;
 `;
 
+const DdayAfter = styled.p`
+    z-index: 2;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    padding-right: 6px;
+    font-style: italic;
+    font-size: 34px;
+    font-weight: bold;
+    color: #fff3ec;
+    word-break: keep-all;
+    text-align: right;
+`
+
 const HideTitle = styled.h2`
     position: absolute;
     left: -9999px;
@@ -117,10 +131,14 @@ export default () => {
                 {getDDay().weddingDay}<br />
                 {data["place"]}
             </Info>
-            <Dday
+            <DdayAfter
                 ref={el => rellaxRef.current[2] = el}
                 data-rellax-speed="1"
-            >D-{getDDay().dday}</Dday>
+            >축하해주셔서 감사합니다💖</DdayAfter>
+            {/* <Dday
+                ref={el => rellaxRef.current[2] = el}
+                data-rellax-speed="1"
+            >D-{getDDay().dday}</Dday> */}
 
         </Content>
     )

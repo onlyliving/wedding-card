@@ -28,7 +28,7 @@ export default () => {
             <MapSection />
             <ContactVideoSection />
             <AccountSection />
-            <GuestBook />
+            {/* <GuestBook /> */}
         </div>
     )
 };
